@@ -1,0 +1,33 @@
+$darkShade100: rgba(31, 32, 65, 1);
+$darkShade75: rgba(31, 32, 65, 0.75);
+$darkShade50: rgba(31, 32, 65, 0.5);
+$darkShade25: rgba(31, 32, 65, 0.25);
+$darkShade10: rgba(31, 32, 65, 0.1);
+$darkShade5: rgba(31, 32, 65, 0.05);
+$purple: #bc9cff;
+$green: #6fcf97;
+$linearGradientPurple: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+$linearGradientGreen: linear-gradient(180deg, $green 0%, #66D2EA 100%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: $darkShade25;
+  opacity: 1;
+  /* Firefox */
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+%bold {
+  font-family: "Montserrat Bold", sans-serif;
+}

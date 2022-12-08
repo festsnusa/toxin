@@ -1,5 +1,5 @@
-@import '../../assets/libs/_vars';
-@import '../../assets/libs/_fonts';
+@import '../../assets/libs/vars.scss';
+// @import '../../assets/libs/_fonts';
 
 $boxSize: 4.3rem;
 
@@ -54,7 +54,7 @@ $boxSize: 4.3rem;
 
     &__title {
         grid-area: title;
-        @extend .bold;
+        @extend %bold;
         width: max-content;
     }
 
@@ -89,7 +89,7 @@ $boxSize: 4.3rem;
     }
 
     &__subtitle {
-        @extend .bold;
+        @extend %bold;
     }
 
     &_h1 {
@@ -104,7 +104,7 @@ $boxSize: 4.3rem;
         }
 
         #{$root}__subtitle {
-            @extend .bold;
+            @extend %bold;
         }
 
     }
