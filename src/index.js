@@ -1,2 +1,2 @@
 import './fonts/fonts.scss'
-import './main.scss'
+import './pages/main/main.scss'

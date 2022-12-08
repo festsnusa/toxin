@@ -46,7 +46,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'template.pug'),
+      template: path.join(__dirname, 'src/pages/main', 'main.pug'),
       filename: 'index.html',
     }),
     new FileManagerPlugin({

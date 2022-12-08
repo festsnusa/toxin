@@ -1,0 +1,24 @@
+extends ../../template.pug
+
+block title 
+  title Основное меню
+
+block content 
+  
+  main.main
+    -
+      let data = [
+        {"href": "../colors-and-type/colors-and-type.html", "title": "Colors & Type"},
+        {"href": "#", "title": "Form elements"},
+        {"href": "#", "title": "Cards"},
+        {"href": "#", "title": "Headers & Footers"},
+        {"href": "#", "title": "Landing page"},
+        {"href": "#", "title": "Search room"},
+        {"href": "#", "title": "Room details"},
+        {"href": "#", "title": "Registration"},
+        {"href": "#", "title": "Sign in"}
+      ]
+    ul.main__menu
+      each value in data
+        li.main__item
+          a.main__link(href= value["href"])= value["title"]

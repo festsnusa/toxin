@@ -1,29 +1,37 @@
--let firstColor = '#1F2041'
--let secondColor = '#BC9CFF'
--let thirdColor = '#6FCF97'
--let colors = [{"class": "darkShade100", "title": 'Dark Shade 100%', "color": firstColor}, {"class": "darkShade75", "title": 'Dark Shade 75%', "color": firstColor}, {"class": "darkShade50", "title": 'Dark Shade 50%', "color": firstColor}, {"class": "darkShade25", "title": 'Dark Shade 25%', "color": firstColor}, {"class": "darkShade5", "title": 'Dark Shade 5%', "color": firstColor}, {"class": "purple", "title": 'Purple', "color": secondColor}, {"class": "green", "title": 'Green', "color": thirdColor}]
--let tags = [{"title": "h1", "subtitle": "This one is the sub-section or widget title"}, {"title": "h2", "subtitle": "Next one is the item title inside widgets"}, {"title": "h3", "subtitle": "This is a label or CTA text"}, {"title": "body", "subtitle": "This is the body text which is used for most of the design, like paragraphs, lists, etc."}]
+extends ../../template.pug
 
-mixin fonts
-  each value in colors
-    .color(class=`color_${value["class"]}`)
-      .color__box 
-      p.color__title= value["title"]
-      p.color__subtitle= value["color"]
+block title 
+  title= `Colors & Type`
 
-mixin tagsSection 
-  each value in tags 
-    .tag-example(class=`tag-example_${value["title"]}`)
-      p.tag-example__title= value["title"]
-      p.tag-example__subtitle= value["subtitle"]
+block style 
+  link(rel="stylesheet", href= './colors-and-type.css')
 
+block content
+  -let firstColor = '#1F2041'
+  -let secondColor = '#BC9CFF'
+  -let thirdColor = '#6FCF97'
+  -let colors = [{"class": "darkShade100", "title": 'Dark Shade 100%', "color": firstColor}, {"class": "darkShade75", "title": 'Dark Shade 75%', "color": firstColor}, {"class": "darkShade50", "title": 'Dark Shade 50%', "color": firstColor}, {"class": "darkShade25", "title": 'Dark Shade 25%', "color": firstColor}, {"class": "darkShade5", "title": 'Dark Shade 5%', "color": firstColor}, {"class": "purple", "title": 'Purple', "color": secondColor}, {"class": "green", "title": 'Green', "color": thirdColor}]
+  -let tags = [{"title": "h1", "subtitle": "This one is the sub-section or widget title"}, {"title": "h2", "subtitle": "Next one is the item title inside widgets"}, {"title": "h3", "subtitle": "This is a label or CTA text"}, {"title": "body", "subtitle": "This is the body text which is used for most of the design, like paragraphs, lists, etc."}]
 
-link(rel="stylesheet", href="colors-and-type.css")
-.nav 
-  a.logo(href="#") 
-    img(src="../../assets/images/logo-colorless.svg", alt="logo")
-.main 
-  .main__colors 
-    +fonts
-  .main__types
-    +tagsSection
+  mixin fonts
+    each value in colors
+      .color(class=`color_${value["class"]}`)
+        .color__box 
+        p.color__title= value["title"]
+        p.color__subtitle= value["color"]
+
+  mixin tagsSection 
+    each value in tags 
+      .tag-example(class=`tag-example_${value["title"]}`)
+        p.tag-example__title= value["title"]
+        p.tag-example__subtitle= value["subtitle"]
+
+  //- link(rel="stylesheet", href=require('./colors-and-type.css'))
+  .nav 
+    a.logo(href="#") 
+      img(src= '../../images/logo-colorless.svg', alt="logo")
+  .main 
+    .main__colors 
+      +fonts
+    .main__types
+      +tagsSection
