@@ -21,7 +21,7 @@
 
     &-section {
       display: flex;
-      @extend .bold;
+      @extend %bold;
       align-items: baseline;
 
       &__number {
@@ -56,7 +56,7 @@
   &__price {
     font-size: 0.875rem;
     margin-right: 0.25rem;
-    @extend .bold;
+    @extend %bold;
   }
 
   &__per-day {
@@ -81,7 +81,7 @@
     }
 
     &_number {
-      @extend .bold;
+      @extend %bold;
       margin-right: 0.35rem;
     }
 

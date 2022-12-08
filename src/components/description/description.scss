@@ -27,7 +27,7 @@
 
     &__title {
       grid-area: title;
-      @extend .bold;
+      @extend %bold;
     }
 
     &__subtitle {

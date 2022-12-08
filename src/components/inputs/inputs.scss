@@ -21,7 +21,7 @@ input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     }
 
     &__title {
-        @extend .bold;
+        @extend %bold;
         font-size: 0.75rem;
         line-height: 0.7375rem;
         text-transform: uppercase;
@@ -53,7 +53,7 @@ input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     width: 100%;
 
     &__title {
-        @extend .bold;
+        @extend %bold;
         font-size: .75rem;
         line-height: 0.7375rem;
         text-transform: uppercase;

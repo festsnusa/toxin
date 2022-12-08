@@ -12,7 +12,7 @@
   }
 
   &__title {
-    @extend .bold;
+    @extend %bold;
     font-size: 1.5rem;
   }
 

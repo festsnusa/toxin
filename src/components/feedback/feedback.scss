@@ -9,7 +9,7 @@
   }
 
   &__title {
-    @extend .bold;
+    @extend %bold;
     font-size: 1.1875rem;
     line-height: 1.5rem;
   }
@@ -50,7 +50,7 @@
     }
 
     &--name {
-      @extend .bold;
+      @extend %bold;
     }
   }
 

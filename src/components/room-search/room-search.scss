@@ -11,7 +11,7 @@
   }
 
   &__title {
-    @extend .bold;
+    @extend %bold;
     font-size: 1.5rem;
     line-height: 1.829rem;
   }

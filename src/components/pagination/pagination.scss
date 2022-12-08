@@ -9,7 +9,7 @@
 
   &__title {
     font-size: .75rem;
-    @extend .bold;
+    @extend %bold;
     text-transform: uppercase;
     margin-bottom: 1.05rem;
   }

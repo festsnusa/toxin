@@ -6,12 +6,12 @@ const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const devServer = module.exports = function () {
+const devServer = module.exports = function() {
   return {
     devServer: {
-      static: './dist',
+      // static: './docs',
       port: 8080,
-      open: '/main.html',
+      open: 'main.html',
       hot: false,
     },
   };
@@ -150,7 +150,7 @@ const PATHS = {
 
 const devMode = process.env.NODE_ENV === 'development';
 const productionMode = !devMode;
-const filename = (ext) => (devMode ? `${ext}/[name].${ext}` : `${ext}/[name].[contenthash].${ext}`);
+const fileName = (ext) => (devMode ? `${ext}/[name].${ext}` : `${ext}/[name].[contenthash].${ext}`);
 const entryPoints = PAGES.map(page => ({ [page]: `${PAGES_DIR}/${page}/index.js`, }));
 const entryPointsCorrect = Object.assign({}, ...entryPoints);
 
@@ -158,7 +158,7 @@ const common = merge([
   {
     entry: entryPointsCorrect,
     output: {
-      filename: filename('js'),
+      filename: fileName('js'),
       path: PATHS.dist,
       clean: true,
     },
@@ -174,7 +174,7 @@ const common = merge([
 
     plugins: [
       new MiniCssExtractPlugin({
-        filename: filename('css'),
+        filename: fileName('css'),
       }),
       ...PAGES.map(
         (page) =>

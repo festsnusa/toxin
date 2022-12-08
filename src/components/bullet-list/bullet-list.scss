@@ -4,7 +4,7 @@
 
     &__header {
       font-size: .75rem;
-      @extend .bold;
+      @extend %bold;
       text-transform: uppercase;
       line-height: .9375rem;
       margin-bottom: 0.85rem;

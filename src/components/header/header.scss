@@ -84,7 +84,7 @@
   }
 
   &_bold {
-    @extend .bold;
+    @extend %bold;
   }
 }
 

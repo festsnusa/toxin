@@ -27,7 +27,7 @@
     display: flex;
     align-items: baseline;
   
-    @extend .bold;
+    @extend %bold;
   
     &__number {
       font-size: .875rem;
@@ -65,7 +65,7 @@
   &__price {
     font-size: .875rem;
     margin-right: 0.25rem;
-    @extend .bold;
+    @extend %bold;
   }
 
   &__per-day {
@@ -131,7 +131,7 @@
   &__info {
     width: 0.25rem;
     height: 0.875rem;
-    @extend .bold;
+    @extend %bold;
     font-size: 0.75rem;
     line-height: 0.875rem;
 
@@ -173,7 +173,7 @@
   &__total-caption,
   &__result {
     font-size: 1.188rem;
-    @extend .bold;
+    @extend %bold;
   }
 
   &__dots {

@@ -15,7 +15,7 @@
   &__title {
     text-transform: uppercase;
     font-size: 0.75rem;
-    @extend .bold;
+    @extend %bold;
   }
 
   &__button {

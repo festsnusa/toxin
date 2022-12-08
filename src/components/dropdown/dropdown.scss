@@ -15,7 +15,7 @@
   }
 
   &__title {
-    @extend .bold;
+    @extend %bold;
     display: inline;
   }
 
@@ -105,7 +105,7 @@
 
       &__caption {
         font-size: .75rem;
-        @extend .bold;
+        @extend %bold;
         text-transform: uppercase;
         color: $darkShade100;
       }
@@ -131,7 +131,7 @@
 
       &__counter {
         font-size: .75rem;
-        @extend .bold;
+        @extend %bold;
         color: $darkShade100;
       }
     }
@@ -175,7 +175,7 @@
     border: none;
     cursor: pointer;
     font-size: .75rem;
-    @extend .bold;
+    @extend %bold;
     font-family: Montserrat, Arial, sans-serif;
     text-transform: uppercase;
     margin-top: 0.6rem;
@@ -201,7 +201,7 @@
 
   &__title {
     font-size: 0.75rem;
-    @extend .bold;
+    @extend %bold;
     text-transform: uppercase;
   }
 
@@ -265,7 +265,7 @@
 
   &__title {
     font-size: 0.75rem;
-    @extend .bold;
+    @extend %bold;
     text-transform: uppercase;
     margin-bottom: 0.31rem;
   }

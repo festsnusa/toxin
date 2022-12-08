@@ -1,20 +1,20 @@
 @import '../../assets/libs/vars.scss';
 @import '../../assets/fonts/fonts.scss';
-@import '../../components/__dropdown/_dropdown';
-@import '../../components/__inputs/_inputs';
-@import '../../components/__pagination/_pagination';
-@import '../../components/__checkbox/_checkbox';
-@import '../../components/__radio-buttons/_radio-buttons';
-@import '../../components/__toggle/_toggle';
-@import '../../components/__like-button/_like-button';
-@import '../../components/__rate-button/_rate-button';
-@import '../../components/__range-slider/_range-slider';
-@import '../../components/__buttons/_buttons';
-@import '../../components/__rich-checkbox/_rich-checkbox';
-@import '../../components/__bullet-list/_bullet-list';
-@import '../../components/__description/_description';
-@import '../../components/__feedback/_feedback';
-@import '../../components/__datepicker/_datepicker';
+@import '../../components/dropdown/dropdown.scss';
+@import '../../components/inputs/inputs.scss';
+@import '../../components/pagination/pagination.scss';
+@import '../../components/checkbox/checkbox.scss';
+@import '../../components/radio-buttons/radio-buttons.scss';
+@import '../../components/toggle/toggle.scss';
+@import '../../components/like-button/like-button.scss';
+@import '../../components/rate-button/rate-button.scss';
+@import '../../components/range-slider/range-slider.scss';
+@import '../../components/buttons/buttons.scss';
+@import '../../components/rich-checkbox/rich-checkbox.scss';
+@import '../../components/bullet-list/bullet-list.scss';
+@import '../../components/description/description.scss';
+@import '../../components/feedback/feedback.scss';
+@import '../../components/datepicker/datepicker.scss';
 
 .nav {
   margin-top: 1.9rem;
@@ -38,8 +38,7 @@
       margin-bottom: 1.83rem;
     }
 
-    // @import '__grid-templates/_grid-templates';
-    @import '../../components/__grid-templates/_grid-templates';
+    @import '../../components/grid-templates/grid-templates';
   }
 
   &__input {
@@ -127,6 +126,5 @@
   &__feedbacks {
     padding-top: 1.6rem;
   }
-
 
 }
