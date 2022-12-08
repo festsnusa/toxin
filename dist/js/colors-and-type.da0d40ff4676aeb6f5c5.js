@@ -15,7 +15,7 @@
   \********************************************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://toxin/./src/pages/colors-and-type/index.js?");
+eval("// import './colors-and-type.scss'\n\n//# sourceURL=webpack://toxin/./src/pages/colors-and-type/index.js?");
 
 /***/ })
 

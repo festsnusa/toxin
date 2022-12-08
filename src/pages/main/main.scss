@@ -1,12 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-family: 'Montserrat';
-}
+@import '../../assets/fonts/fonts.scss';
+@import '../../assets/libs/vars.scss';
 
 .main {
   min-height: 100vh;
@@ -23,7 +16,7 @@ html {
     text-decoration: none;
 
     &:hover {
-      color: black;
+      color: #000;
     }
   }
 }

@@ -25,11 +25,10 @@ block content
       .tag-example(class=`tag-example_${value["title"]}`)
         p.tag-example__title= value["title"]
         p.tag-example__subtitle= value["subtitle"]
-
-  //- link(rel="stylesheet", href=require('./colors-and-type.css'))
+        
   .nav 
     a.logo(href="#") 
-      img(src= require('../../assets/images/profile-2.jpg'), alt="logo")
+      img(src= require('../../assets/images/logo-colorless.svg'), alt="logo")
   .main 
     .main__colors 
       +fonts

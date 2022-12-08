@@ -9,7 +9,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const devServer = module.exports = function () {
   return {
     devServer: {
-      // static: './dist',
+      static: './dist',
       port: 8080,
       open: '/main.html',
       hot: false,
