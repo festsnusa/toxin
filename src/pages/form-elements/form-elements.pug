@@ -1,0 +1,115 @@
+link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0")
+link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+include ../../components/__inputs/__inputs
+include ../../components/__dropdown/__dropdown
+include ../../components/__datepicker/__datepicker
+include ../../components/__checkbox/__checkbox
+include ../../components/__radio-buttons/__radio-buttons
+include ../../components/__toggle/__toggle
+include ../../components/__like-button/__like-button
+include ../../components/__rate-button/__rate-button
+include ../../components/__range-slider/__range-slider
+include ../../components/__buttons/__buttons
+include ../../components/__pagination/__pagination
+include ../../components/__rich-checkbox/__rich-checkbox
+include ../../components/__description/__description
+include ../../components/__feedback/__feedback
+include ../../components/__bullet-list/__bullet-list
+
+.nav
+  a.logo(href="#") 
+    img(src="../../assets/images/logo-colorless.svg", alt="logo")
+.form-elements
+  .form-elements__content
+    .first-column
+      .form-elements__input-default
+        +createInput({class: "default", inputType: "text", name: "email", placeholder: "Email", title: "Text Field", subtitle: "Default"})
+      .form-elements__input-hover
+        +createInput({class: "hover", inputType: "text", name: "This is pretty awesome", placeholder: "This is pretty awesome", title: "Text Field", subtitle: "Hover / Focus"})
+      .form-elements__input-dropdown
+        +createDropdown({"footer": "_visible", type: "guests", title: "Dropdown", listClass: "shrinked", placeholder: "Сколько гостей", inputCount: "first"}, {Взрослые: 'adults', Дети: 'children', Младенцы: 'babies'})
+      .form-elements__input-masked
+        +createInput({class: "field", name: "masked-field", placeholder: "ДД.ММ.ГГГГ", title: "Masked text field", inputClass: "js-input__box--masked-field"})
+      .form-elements__datedropdown_double
+        +createCalendar("date-picker-start", "date-picker-end", true, false, ["Date Dropdown", "Date Dropdown"])
+      .form-elements__datedropdown_single
+        +createSingleInputCalendar("Filter Date Dropdown")
+      .form-elements__input-subscription
+        +createSubscriptionField("Subscription Text Field")
+    .gap
+    .second-column
+      .form-elements__checkbox-buttons
+        +createCheckboxItems([{"name": "smoke-allow", "checked": false, "caption": "Можно курить"}, {"name": "pet-allow", "checked": true, "caption": "Можно с питомцами"}, {"name": "guests-allow", "checked": true, "caption": "Можно пригласить гостей (до 10 человек)"}], false, false, 'Checkbox Buttons')
+      .form-elements__radio-buttons
+        +createRadioButton({1: ["gender", true, "Мужчина"], 2: ["gender", false, "Женщина"]}, 'Radio Buttons')
+      .form-elements__toggle
+        +toggle({1: [true, "Получать спецпредложения"], 2: [false, "Получать спецпредложения"]}, "Toggle")
+      .form-elements__like-buttons
+        +createlikeButton({1: [2, 'favorite_border'], 2: [12, 'favorite']}, title = 'like button')
+      .form-elements__rate-buttons
+        .rate-button
+          p.rate-button__title Rate button
+          .rate-button__group
+            +rateButton(4)
+            +rateButton(5)
+    .gap
+    .third-column
+      .form-elements__range-slider
+        +createRangeSlider('Range slider')
+      .form-elements__buttons
+        +createButtons('Buttons')
+      .form-elements__pagination
+        +createPagination(15, true, true)
+
+  .form-elements__content
+    .first-column
+      .form-elements__dropdown-beds
+        +createDropdown({"footer": "_invisible", type: "rooms", placeholder: '2 спальни, 2 кровати', title: 'Dropdown', subtitle: 'Default'}, {'Спальни': 'bedrooms', 'Кровати': 'beds', 'Ванные комнаты': 'bathrooms'}, [2, 2, 0])
+      .form-elements__dropdown-beds_expanded
+        +createDropdown({"footer": "_invisible", type: "rooms", placeholder: '2 спальни, 2 кровати', title: 'Dropdown', subtitle: 'Expanded', expanded}, {'Спальни': 'bedrooms', 'Кровати': 'beds', 'Ванные комнаты': 'bathrooms'}, [2, 2, 0])
+    .gap 
+    .second-column
+      .form-elements__dropdown-guests
+        +createDropdown({"footer": "_visible", type: "guests", title: "Dropdown", listClass: "shrinked", placeholder: "Сколько гостей", expanded}, {Взрослые: 'adults', Дети: 'children', Младенцы: 'babies'})
+
+    .gap 
+    .third-column
+      .form-elements__dropdown-guests_second
+        +createDropdown({"footer": "_visible", type: "guests", title: "Dropdown", listClass: "expanded", placeholder: "Сколько гостей", expanded}, {Взрослые: 'adults', Дети: 'children', Младенцы: 'babies'})
+
+  .form-elements__content
+    .first-column
+      -let expandableTitle = 'Expandable Checkbox List'
+      -let expandableCheckboxOptions = [{"name": "breakfast", "checked": false, "caption": "Завтрак"}, {"name": "desk", "checked": true, "caption": "Письменный стол"}, {"name": "feeding-chair", "checked": true, "caption": "Стул для кормления"}, {"name": "bed", "checked": true, "caption": "Кроватка"}, {"name": "tv", "checked": false, "caption": "Телевизор"}, {"name": "shampoo", "checked": false, "caption": "Шампунь"}]
+      .form-elements__checkbox-expandable
+        +createCheckboxItems(expandableCheckboxOptions, true, false, 'Expandable Checkbox List')
+      .form-elements__checkbox-expanded
+        +createCheckboxItems(expandableCheckboxOptions, true, true, 'Expandable Checkbox List')
+
+    .gap 
+    .second-column
+      .form-elements__checkbox-rich
+        +createRichCheckboxList('Rich сheckbox buttons')
+    .gap 
+    .third-column
+      .form-elements__bullet-list
+        +createBulletList(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'], 'Bullet list')
+  .form-elements__content
+    .first-column
+      .form-elements__description
+        +createDescription([{"icon": "insert_emoticon", "title": "Комфорт", "subtitle": "Шумопоглощающие стены"}, {"icon": "location_city", "title": "Удобство", "subtitle": "Окно в каждой из спален"}])
+    .gap 
+    .second-column
+      -let comment = "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+      .form-elements__feedbacks
+        +createFeedbacksSection([{"src": "../../assets/images/profile.jpg", "alt": "Фото 1", "author": "Мурад Сарафанов", "days": "5", "likes": "12", "liked": 'favorite', "comment": comment}])
+
+script(src="https://code.jquery.com/jquery-3.6.1.js", integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=", crossorigin="anonymous")
+//- script(src="../../components/__range-slider/__range-slider.js")
+//- script(src="../../assets/libs/masked-field.js")
+//- script(src="../../components/__pagination/__pagination.js")
+//- script(type="module" src="../../components/__datepicker/__datepicker.js")
+//- script(src="../../components/__dropdown/__dropdown.js")
+//- script(src="../../components/__like-button/__like-button.js")
+//- script(src="../../components/__checkbox/__checkbox.js")
+//- script(src="./form-elements.js")

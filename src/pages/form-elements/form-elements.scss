@@ -1,0 +1,132 @@
+@import '../../assets/libs/vars.scss';
+@import '../../assets/fonts/fonts.scss';
+@import '../../components/__dropdown/_dropdown';
+@import '../../components/__inputs/_inputs';
+@import '../../components/__pagination/_pagination';
+@import '../../components/__checkbox/_checkbox';
+@import '../../components/__radio-buttons/_radio-buttons';
+@import '../../components/__toggle/_toggle';
+@import '../../components/__like-button/_like-button';
+@import '../../components/__rate-button/_rate-button';
+@import '../../components/__range-slider/_range-slider';
+@import '../../components/__buttons/_buttons';
+@import '../../components/__rich-checkbox/_rich-checkbox';
+@import '../../components/__bullet-list/_bullet-list';
+@import '../../components/__description/_description';
+@import '../../components/__feedback/_feedback';
+@import '../../components/__datepicker/_datepicker';
+
+.nav {
+  margin-top: 1.9rem;
+  margin-left: 1.9rem;
+}
+
+.form-elements {
+  max-width: 84%;
+  margin: 3.85rem 8.8rem;
+
+  &__content {
+    display: -ms-grid;
+    display: grid;
+
+    .first-column {
+      max-width: 20rem;
+    }
+
+    .second-column {
+      margin-top: 0.18rem;
+      margin-bottom: 1.83rem;
+    }
+
+    // @import '__grid-templates/_grid-templates';
+    @import '../../components/__grid-templates/_grid-templates';
+  }
+
+  &__input {
+
+    &-default {
+      margin-top: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+    
+    &-hover {
+      margin-bottom: 1.3rem;
+    }
+
+    &-dropdown {
+      margin-bottom: 1.5rem;
+    }
+
+    &-masked {
+      margin-bottom: 2.5rem;
+    }
+
+    &-subscription {
+      max-width: 16.6rem;
+    }
+  }
+
+  &__datedropdown {
+    &_double {
+      margin-bottom: 2.55rem;
+    }
+
+    &_single {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__dropdown {
+
+    &-beds {
+      // min-width: 16.5rem;
+      margin-bottom: 1.33rem;
+
+      &_expanded {
+        // min-width: 16.5rem;
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  &__checkbox {
+
+    &-buttons {
+      margin-bottom: 1.95rem;
+    }
+    
+    &-expandable {
+      margin-bottom: 2.4rem;
+    }
+
+    &-expanded {
+      margin-bottom: 3.95rem;
+    }
+  }
+
+  &__radio-buttons {
+    margin-bottom: 2.5rem;
+  }
+  
+  &__toggle {
+    margin-bottom: 2rem;
+  }
+
+  &__like-buttons {
+    margin-bottom: 2.5rem;
+  }
+
+  &__range-slider {
+    margin-bottom: 4.55rem;
+  }
+
+  &__buttons {
+    margin-bottom: 2.4rem;
+  }
+
+  &__feedbacks {
+    padding-top: 1.6rem;
+  }
+
+
+}
