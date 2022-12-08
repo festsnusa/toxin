@@ -1,0 +1,20 @@
+include ../__like-button/__like-button.pug
+
+mixin createFeedbacksSection(data, titleNeeded = false)
+	-let arr = [2, 3, 4]
+	-let word = (data.length == 1) ? 'отзыв' : (arr.includes(data.length)) ? 'отзыва' : 'отзывов'
+	.feedback
+		if (titleNeeded)
+			.feedback__header
+				p.feedback__title Отзывы посетителей номера
+				p.feedback__subtitle= `${data.length} ${word}`
+		each value in data
+			.feedback__content
+				img.feedback__image(src= value["src"] alt= value["alt"])
+				.feedback__author 
+					p.feedback__author--name= value["author"]
+					p.feedback__author--date= `${value["days"]} дней назад`
+				.feedback__likes
+					+createlikeButton({1: [value["likes"], value["liked"]]})
+				p.feedback__text= value["comment"]
+

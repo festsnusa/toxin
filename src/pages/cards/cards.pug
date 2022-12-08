@@ -1,0 +1,51 @@
+link(rel="stylesheet" href="cards.css")
+link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0")
+link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+include ../../components/__buttons/__buttons
+include ../../components/__datepicker/__datepicker
+include ../../components/__dropdown/__dropdown
+include ../../components/__inputs/__inputs
+include ../../components/__radio-buttons/__radio-buttons
+include ../../components/__rate-button/__rate-button
+include ../../components/__toggle/__toggle
+include ../../components/__room-search/__room-search
+include ../../components/__registration-form/__registration-form
+include ../../components/__booking-form/__booking-form
+include ../../components/__login-form/__login-form
+include ../../components/__room-preview/__room-preview
+include ../../components/__image-slider/__image-slider
+
+.nav
+  a.logo(href="#") 
+    img(src="../../assets/images/logo-colorless.svg" alt="#")
+.cards   
+  .cards__firstColumn 
+    .cards__room-search
+      +createRoomSearchCard("Найдём номера под ваши пожелания")
+    .cards__registration
+      +createRegistrationFormCard
+  .cards__gap
+  .cards__secondColumn 
+    .cards__booking
+      +createBookingFormCard("888", "9 990", true, true)
+    .cards__log-in
+      +createLoginFormCard
+  .cards__gap
+  .cards__thirdColumn
+    .cards__calendar
+      +createCalendar("date-picker-start", "date-picker-end", false, true)
+    .cards__room-preview
+      -let imagesFirst = [{src: "../../assets/images/room-1-slider.jpg", alt: "Фото 1"}, {src: "../../assets/images/room-2-slider.jpg", alt: "Фото 2"}, {src: "../../assets/images/room-3-slider.jpg", alt: "Фото 3"}, {src: "../../assets/images/room-4-slider.jpg", alt: "Фото 4"}]
+      +createRoomPreview(imagesFirst, "888", 5, 145, true)
+    .cards__room-preview
+      -let imagesSecond = [{src: "../../assets/images/room-2-slider.jpg", alt: "Фото 1"}, {src: "../../assets/images/room-4-slider.jpg", alt: "Фото 2"}, {src: "../../assets/images/room-1-slider.jpg", alt: "Фото 3"}, {src: "../../assets/images/room-3-slider.jpg", alt: "Фото 4"}]
+      +createRoomPreview(imagesSecond, 840, 4, 65)
+
+script(src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous")
+//- script(src="../../assets/libs/masked-field.js")
+script(src="../../assets/libs/masked-field.js")
+script(type="module" src="../../assets/libs/moment.js")
+script(type="module" src="../../components/__datepicker/__datepicker.js")
+script(src="../../components/__dropdown/__dropdown.js")
+script(src="../../components/__image-slider/__image-slider.js")
+script(src="./cards.js")

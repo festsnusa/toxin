@@ -1,0 +1,68 @@
+.rich-checkbox {
+
+  $root: &;
+
+  width: 100%;
+  max-width: 16.625rem;
+
+  &__header {
+    font-size: 0.75rem;
+    @extend .bold;
+    text-transform: uppercase;
+    margin-bottom: 1.15rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    padding-bottom: 0.525rem;
+  }
+
+  &__label {
+    display: grid;
+    column-gap: 0.625rem;
+    row-gap: 0.3125rem;
+    grid-template-areas: "input title" ". subtitle";
+    cursor: pointer;
+  }
+
+  &__checkbox,
+  &__input {
+    grid-area: input;
+    align-self: center;
+    justify-self: center;
+  }
+
+  &__input {
+    appearance: none;
+  }
+
+  &__checkbox {
+    height: 1.25rem;
+    width: 1.25rem;
+    border: 0.0625rem solid $darkShade25;
+    border-radius: 0.25rem;
+  }
+
+  &__title {
+    grid-area: title;
+    font-size: .875rem;
+    @extend .bold;
+    line-height: 1.125rem;
+    color: $darkShade75;
+  }
+
+  &__subtitle {
+    grid-area: subtitle;
+    font-size: .75rem;
+    line-height: .875rem;
+    color: $darkShade50;
+  }
+
+  &__input:checked+#{$root}__checkbox {
+    border: 0.0625rem solid $purple;
+    background: url('../../assets/images/vector.svg') no-repeat 50% 38%;
+  }
+}

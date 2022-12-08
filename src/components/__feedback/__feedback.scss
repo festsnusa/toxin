@@ -1,0 +1,68 @@
+.feedback {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.2rem;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+  }
+
+  &__title {
+    @extend .bold;
+    font-size: 1.1875rem;
+    line-height: 1.5rem;
+  }
+
+  &__subtitle {
+    font-size: .875rem;
+    color: $darkShade50;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-areas: "image author" "likes text";
+    grid-template-columns: 3.125rem auto;
+    column-gap: 0.5rem;
+    row-gap: 0.7em;
+
+    width: 100%;
+    max-width: 44.4375rem;
+
+  }
+
+  &__image {
+    grid-area: image;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 0.1rem;
+  }
+
+  &__author {
+    grid-area: author;
+    align-self: center;
+
+    &--name,
+    &--date {
+      font-size: .875rem;
+      line-height: 1.5rem;
+      color: $darkShade75;
+    }
+
+    &--name {
+      @extend .bold;
+    }
+  }
+
+  &__likes {
+    grid-area: likes;
+    justify-self: center;
+  }
+
+  &__text {
+    grid-area: text;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: $darkShade75;
+  }
+}

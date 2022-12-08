@@ -1,0 +1,35 @@
+mixin createBookingFormCard(roomNumber, price, luxe, isBookingForm)
+  .booking-form
+    .booking-form__room
+      .booking-form__room-section
+        span.booking-form__room-section__number №
+        p.booking-form__room-section__number_booking= roomNumber
+        if (luxe)
+          p.booking-form__room-section__luxe люкс
+      .booking-form__price-section
+        p.booking-form__price= `${price}₽`
+        p.booking-form__per-day в сутки
+    .booking-form__arrival
+      +createCalendar("date-picker-start", "date-picker-end")
+    .booking-form__dropdown
+      +createDropdown({"footer": "_visible", type: "guests", title: "Гости", listClass: "shrinked", placeholder: "Сколько гостей"}, {Взрослые: 'adults', Дети: 'children', Младенцы: 'babies'})
+    .booking-form__calculations 
+      .booking-form__total-per-days
+        p.booking-form__multiplied= `${price}₽ х 0 суток`
+        p.booking-form__multiplied-result= 0₽
+      .booking-form__discounts 
+        p.booking-form__service Сбор за услуги: скидка 2 179₽
+        span.booking-form__ellipse
+          span.booking-form__info(data-title="Информация") i
+        p.booking-form__amount 0₽
+      .booking-form__additional-services 
+        p.booking-form__service Сбор за дополнительные услуги
+        span.booking-form__ellipse
+          span.booking-form__info(data-title="Информация") i
+        p.booking-form__amount 300₽
+      .booking-form__total
+        p.booking-form__total-caption Итого
+        p.booking-form__dots
+        p.booking-form__result 0₽
+    .booking-form__submit-button
+      +createProceedButton("Забронировать")

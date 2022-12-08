@@ -1,0 +1,96 @@
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $darkShade75;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $darkShade75;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $darkShade75;
+  }
+
+.input {
+    max-width: inherit;
+    width: 100%;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        @extend .bold;
+        font-size: 0.75rem;
+        line-height: 0.7375rem;
+        text-transform: uppercase;
+        margin-bottom: 0.4rem;
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        color: $darkShade50;
+        font-size: 0.75rem;
+        line-height: 0.7375rem;
+    }
+
+    &__box {
+        margin: 0 auto;
+        font-size: 0.875rem;
+        width: 100%;
+        line-height: 2.625rem;
+        padding: 0 2.375rem 0 0.875rem;
+        border: 1px solid $darkShade25;
+        border-radius: 0.25rem;
+        color: $darkShade75;
+    }
+}
+
+.subscription-field {
+    
+    max-width: inherit;
+    width: 100%;
+
+    &__title {
+        @extend .bold;
+        font-size: .75rem;
+        line-height: 0.7375rem;
+        text-transform: uppercase;
+    }
+
+    &__input-box {
+        display: flex;
+        position: relative;
+        line-height: 2.75rem;
+        margin: 0.45rem auto 0.5rem;
+    }
+
+    &__input {
+        font-size: 0.875rem;
+        width: 100%;
+        line-height: 2.625rem;
+        padding: 0 2.375rem 0 0.875rem;
+        border: 1px solid $darkShade25;
+        border-radius: 0.25rem;
+    }
+
+    &__input-button {
+        position: absolute;
+        top: 25%;
+        right: 0.75rem;
+        border: none;
+        cursor: pointer;
+        background: -moz-$linearGradientPurple;
+        background: -webkit-$linearGradientPurple;
+        background: $linearGradientPurple;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        &:before {
+            content: 'arrow_forward';
+        }
+    }
+}

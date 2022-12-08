@@ -1,0 +1,106 @@
+.buttons {
+  margin-bottom: 0.8rem;
+
+  &__title {
+    font-size: .75rem;
+    @extend .bold;
+    text-transform: uppercase;
+    margin-bottom: 1.1rem;
+  }
+
+  &__first-box,
+  &__second-box,
+  &__third-box {
+    display: grid;
+    margin-bottom: 1.9rem;
+  }
+
+  &__first-box,
+  &__second-box {
+    grid-template-columns: repeat(auto-fill, 6.1875rem);
+    column-gap: 1.25rem;
+  }
+
+  &__third-box {
+    grid-template-columns: repeat(auto-fill, 3.8125rem);
+    column-gap: 1.3rem;
+  }
+
+}
+
+.button {
+  border: none;
+  cursor: pointer;
+  height: 2.75rem;
+  width: 6.1875rem;
+  border-radius: 1.375rem;
+
+  &_purple {
+    background: $linearGradientPurple;
+  }
+
+  &_white {
+    background: #fff;
+    border: 0.125rem solid $purple;
+  }
+
+  &_transparent {
+    padding: 0;
+    height: auto;
+    width: auto;
+    background: transparent;
+  }
+
+  &_blocked {
+    opacity: 0.5;
+    cursor: default;
+  }
+
+  &_log-in-button {
+    height: 34px;
+    width: 87px;
+    background: transparent;
+    border: 0.125rem solid $purple;
+  }
+
+  &_registration-button {
+    height: 34px;
+    width: 196px;
+    background: $linearGradientPurple;
+  }
+
+  &_forward {
+    align-items: center;
+    max-width: 20rem;
+    width: 100%;
+
+    .button__text {
+      margin-top: 0.9rem;
+    }
+
+    .material-symbols-outlined {
+      position: relative;
+      font-size: 1.5rem;
+      left: 8.625rem;
+      color: #fff;
+      bottom: 1.2rem;
+    }
+
+
+  }
+
+  &__text {
+    font-size: .75rem;
+    @extend .bold;
+    text-transform: uppercase;
+    color: $darkShade50;
+
+    &_white {
+      color: #fff;
+    }
+
+    &_purple {
+      color: $purple;
+    }
+  }
+}

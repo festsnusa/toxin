@@ -1,0 +1,18 @@
+mixin createInput(data)
+  div(class=`input-${data["class"]}`)
+    .input
+      if ("title" in data)
+        .input__header
+          if ("title" in data)
+            p.input__title= data["title"]
+          if ("subtitle" in data)
+            p.input__subtitle= data["subtitle"]
+      input.input__box(class= data["inputClass"] type= data["inputType"] name= data["name"] placeholder= data["placeholder"])
+
+mixin createSubscriptionField(title='')
+  .subscription-field
+    if (title !='')
+      p.subscription-field__title= title
+    .subscription-field__input-box
+      input.subscription-field__input(type="email" name="subscription-text" placeholder="Email")
+      button.subscription-field__input-button.material-icons(type="submit")

@@ -1,0 +1,33 @@
+.room-search {
+
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .12);
+  padding: 2.4rem 1.85rem 1.85rem 1.8rem;
+  border-radius: 0.25rem;
+
+  &__header {
+    padding-bottom: 1.35rem;
+    margin-top: 0.1rem;
+  }
+
+  &__title {
+    @extend .bold;
+    font-size: 1.5rem;
+    line-height: 1.829rem;
+  }
+
+  &__calendar {
+    padding-bottom: 1.1rem;
+  }
+
+  &__dropdown {
+    padding-bottom: 2rem;
+    margin-top: 0.2rem;
+
+    &__box {
+      position: relative;
+      margin-top: 0.3125rem;
+    }
+  }
+
+}

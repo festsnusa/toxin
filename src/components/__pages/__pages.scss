@@ -1,0 +1,15 @@
+@import '../../assets/libs/__vars.scss';
+
+.pages {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  &__main {
+    flex: 1 0 auto;
+  }
+
+  &__footer {
+    flex: 0 0 auto;
+  }
+}

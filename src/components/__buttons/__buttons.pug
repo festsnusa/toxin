@@ -1,0 +1,28 @@
+mixin createButton(caption, colorButton, colorText, blocked)
+	- let blockedClass = (blocked) ? `button_blocked` : ``
+	- let classes = [`button_${colorButton}`, blockedClass]
+	button.button(class= classes)
+		p.button__text(class= `button__text_${colorText}`)= caption
+
+mixin createProceedButton(text)
+	a.button__link(href="#")
+		button.button.button_purple.button_forward 
+			p.button__text.button__text_white= text
+			span.material-symbols-outlined arrow_forward
+
+mixin createButtons(title = '')
+	.buttons 
+		if (title != '')
+			p.buttons__title= title
+		.buttons__box 
+			.buttons__first-box
+				+createButton('click me', 'purple', 'white', false)
+				+createButton('click me', 'purple', 'white', true)
+			.buttons__second-box 
+				+createButton('click me', 'white', 'purple', false)
+				+createButton('click me', 'white', 'purple', true)
+			.buttons__third-box 
+				+createButton('click me ', 'transparent', 'purple', false)
+				+createButton('click me ', 'transparent', '', true)
+			.buttons__fourth-box
+				+createProceedButton('Перейти к оплате')

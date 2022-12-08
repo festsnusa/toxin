@@ -1,0 +1,26 @@
+include ../../components/__radio-buttons/__radio-buttons
+include ../../components/__toggle/__toggle
+
+mixin createRegistrationFormCard
+	.registration-form
+		.registration-form__header
+			p.registration-form__title Регистрация аккаунта
+		.registration-form__firstname
+			+createInput({class: "default", inputType: "text", name: "first-name", placeholder: "Имя"})
+		.registration-form__lastname
+			+createInput({class: "default", inputType: "text", name: "last-name", placeholder: "Фамилия"})
+		.registration-form__gender
+			+createRadioButton({1: ["gender", true, "Мужчина"], 2: ["gender", false, "Женшина"]}, title='')
+		.registration-form__birth-date
+			+createInput({class: "field", name: "masked-field", placeholder: "ДД.ММ.ГГГГ", title: "Дата рождения", inputClass: "js-input__box--masked-field"})
+		.registration-form__email
+			+createInput({class: "default", inputType: "text", name: "email", placeholder: "Email", title: "Данные для входа в сервис"})
+		.registration-form__password
+			+createInput({class: "default", inputType: "text", name: "password", placeholder: "Пароль"})
+		.registration-form__toggle
+			+toggle({1: [false, "Получать спецпредложения"]})
+		.registration-form__button
+			+createProceedButton("Перейти к оплате")
+		.registration-form__box 
+			p.registration-form__caption Уже есть аккаунт на Toxin 
+			+createButton("Войти", "white", "purple", false)

@@ -1,0 +1,13 @@
+include ../../components/__datepicker/__datepicker.pug
+include ../../components/__dropdown/__dropdown.pug
+
+mixin createRoomSearchCard(title)
+  .room-search
+    .room-search__header
+      p.room-search__title= title
+    .room-search__calendar
+      +createCalendar("date-picker-start", "date-picker-end")
+    .room-search__dropdown
+      +createDropdown({"footer": "_visible", type: "guests", title: "Гости", listClass: "shrinked", placeholder: "Сколько гостей"}, {Взрослые: 'adults', Дети: 'children', Младенцы: 'babies'})
+    .room-search__submit-button 
+      +createProceedButton("Подобрать номер")

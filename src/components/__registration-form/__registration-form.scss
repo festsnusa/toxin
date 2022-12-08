@@ -1,0 +1,60 @@
+.registration-form {
+
+  margin-bottom: 2.45rem;
+  background: #fff;
+  border: 1px solid $darkShade25;
+  border-radius: 0.25rem;
+  padding: 2.4rem 1.85rem 1.85rem 1.8rem;
+
+  &__header {
+    margin-bottom: 1.4rem;
+  }
+
+  &__title {
+    @extend .bold;
+    font-size: 1.5rem;
+  }
+
+  &__firstname {
+    margin-bottom: 0.6rem;
+  }
+
+  &__lastname {
+    margin-bottom: 0.55rem;
+  }
+
+  &__gender {
+    margin-bottom: 1.65rem;
+  }
+
+  &__birth-date {
+    margin-bottom: 1.3rem;
+  }
+
+  &__email {
+    margin-bottom: 0.7rem;
+  }
+
+  &__password {
+    margin-bottom: 0.5rem;
+  }
+
+  &__toggle {
+    margin-bottom: 0.7rem;
+  }
+
+  &__button {
+    margin-bottom: 1.9rem;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__caption {
+    font-size: .875rem;
+    line-height: 1.125rem;
+  }
+}

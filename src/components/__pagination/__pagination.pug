@@ -1,0 +1,24 @@
+mixin createPagination(totalPages, titleNeeded = false, captionNeeded = false)
+
+  -let i = 1
+  -let arr = []
+
+  while (i <= totalPages)
+    -arr.push(i)
+    -i++
+
+  div(class="pagination" actpage="1")
+    if titleNeeded
+      p.pagination__title Pagination
+    .pagination__box
+      .pagination__pages
+        a(href="#!-1" class="pagination__page").pagination__arrow-previous.material-symbols-outlined
+          each value in arr
+            a(href=`#!${value}` class='pagination__page')= value
+        a(href="#!+1" class="pagination__page").pagination__arrow-forward.material-symbols-outlined
+      if captionNeeded
+        p.pagination__caption
+          span.pagination__from 1
+          span  – 
+          span.pagination__to 12 
+          span  из 100+ вариантов аренды

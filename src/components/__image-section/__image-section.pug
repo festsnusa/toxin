@@ -1,0 +1,4 @@
+mixin createImageSection(data)
+  each value in data 
+    .image-section 
+      img.image-section__image(src= value["src"] alt= value["alt"])

@@ -1,0 +1,599 @@
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<link rel="stylesheet" href="form-elements.css"/>
+<div class="nav"><a class="logo" href="#"> <img src="../../assets/images/logo-colorless.svg" alt="logo"/></a></div>
+<div class="form-elements">
+  <div class="form-elements__content">
+    <div class="first-column">
+      <div class="form-elements__input-default">
+        <div class="input-default">
+          <div class="input">
+            <div class="input__header">
+              <p class="input__title">Text Field</p>
+              <p class="input__subtitle">Default</p>
+            </div>
+            <input class="input__box" type="text" name="email" placeholder="Email"/>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__input-hover">
+        <div class="input-hover">
+          <div class="input">
+            <div class="input__header">
+              <p class="input__title">Text Field</p>
+              <p class="input__subtitle">Hover / Focus</p>
+            </div>
+            <input class="input__box" type="text" name="This is pretty awesome" placeholder="This is pretty awesome"/>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__input-dropdown">
+        <div class="dropdown">
+          <div class="dropdown__title">Dropdown</div>
+          <div class="dropdown__box">
+            <input class="dropdown__input js-dropdown__input--guests" placeholder="Сколько гостей" readonly="readonly"/>
+            <button class="dropdown__button" type="button"><span class="dropdown__icon material-icons"></span></button>
+            <ul class="dropdown__list dropdown__list-shrinked--guests">
+              <li class="dropdown__list-item dropdown__list-item-shrinked--guests">
+                <p class="dropdown__list-item__caption">Взрослые</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-adults">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-adults">0</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-adults">+</button>
+                </div>
+              </li>
+              <li class="dropdown__list-item dropdown__list-item-shrinked--guests">
+                <p class="dropdown__list-item__caption">Дети</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-children">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-children">0</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-children">+</button>
+                </div>
+              </li>
+              <li class="dropdown__list-item dropdown__list-item-shrinked--guests">
+                <p class="dropdown__list-item__caption">Младенцы</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-babies">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-babies">0</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-babies">+</button>
+                </div>
+              </li>
+              <li class="dropdown__footer-section_visible">
+                <button class="dropdown__clear-button dropdown__clear-button-invisible" type="button"><span class="dropdown__clear-button__caption_visible">Очистить</span></button>
+                <button class="dropdown__submit-button dropdown__submit-button_visible" type="button"><span class="dropdown__submit-button__caption">Применить</span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__input-masked">
+        <div class="input-field">
+          <div class="input">
+            <div class="input__header">
+              <p class="input__title">Masked text field</p>
+            </div>
+            <input class="input__box js-input__box--masked-field" name="masked-field" placeholder="ДД.ММ.ГГГГ"/>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__datedropdown_double">
+        <div class="datepicker-box">
+          <div class="input-date-dropdown">
+            <div class="date-dropdown">
+              <div class="date-dropdown__box date-dropdown__box_active">
+                <div class="date-dropdown__title">Date Dropdown</div>
+                <div class="date-dropdown__input-box">
+                  <input class="date-dropdown__input date-picker-start" name="date-picker-start" placeholder="ДД.ММ.ГГГГ" readonly="readonly"/>
+                  <button class="date-dropdown__button"><span class="date-dropdown__icon material-symbols-outlined"></span></button>
+                </div>
+              </div>
+              <div class="date-dropdown__box date-dropdown__box_active">
+                <div class="date-dropdown__title">Date Dropdown</div>
+                <div class="date-dropdown__input-box">
+                  <input class="date-dropdown__input date-picker-end" name="date-picker-end" placeholder="ДД.ММ.ГГГГ" readonly="readonly"/>
+                  <button class="date-dropdown__button"><span class="date-dropdown__icon material-symbols-outlined"></span></button>
+                </div>
+              </div>
+            </div>
+            <div class="date-picker"></div>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__datedropdown_single">
+        <div class="filter-date-dropdown">
+          <p class="filter-date-dropdown__title">Filter Date Dropdown</p>
+          <div class="filter-date-dropdown__input-box">
+            <input class="date-dropdown__input date-dropdown__box_active date-picker-start" name="date-picker-start" placeholder="ДД.ММ.ГГГГ" readonly="readonly"/><span class="filter-date-dropdown__icon material-symbols-outlined"></span>
+          </div>
+          <div class="date-picker"></div>
+        </div>
+      </div>
+      <div class="form-elements__input-subscription">
+        <div class="subscription-field">
+          <p class="subscription-field__title">Subscription Text Field</p>
+          <div class="subscription-field__input-box">
+            <input class="subscription-field__input" type="email" name="subscription-text" placeholder="Email"/>
+            <button class="subscription-field__input-button material-icons" type="submit"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gap"></div>
+    <div class="second-column">
+      <div class="form-elements__checkbox-buttons">
+        <div class="checkbox">
+          <div class="checkbox__header">
+            <p class="checkbox__title">Checkbox Buttons</p>
+          </div>
+          <ul class="checkbox__list">
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="smoke-allow"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Можно курить</span>
+              </label>
+            </li>
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="pet-allow" checked="checked"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Можно с питомцами</span>
+              </label>
+            </li>
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="guests-allow" checked="checked"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Можно пригласить гостей (до 10 человек)</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="form-elements__radio-buttons">
+        <div class="radio-buttons">
+          <p class="radio-buttons__title">Radio Buttons</p>
+          <div class="radio-buttons__box">
+            <div class="radio-buttons__item">
+              <label class="radio-buttons__label">
+                <input class="radio-buttons__input" type="radio" name="gender" checked="checked"/><span class="radio-buttons__radio"></span><span class="radio-buttons__caption">Мужчина</span>
+              </label>
+              <label class="radio-buttons__label">
+                <input class="radio-buttons__input" type="radio" name="gender"/><span class="radio-buttons__radio"></span><span class="radio-buttons__caption">Женщина</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__toggle">
+        <div class="toggle">
+          <p class="toggle__title">Toggle</p>
+          <ul class="toggle__list">
+            <li class="toggle__item">
+              <label class="toggle__label">
+                <input class="toggle__input" type="checkbox" checked="checked"/><span class="toggle__caption">Получать спецпредложения</span>
+              </label>
+            </li>
+            <li class="toggle__item">
+              <label class="toggle__label">
+                <input class="toggle__input" type="checkbox"/><span class="toggle__caption">Получать спецпредложения</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="form-elements__like-buttons">
+        <div class="like-button">
+          <p class="like-button__title">like button</p>
+          <div class="like-button__box">
+            <button class="like-button__button js-like-button__button" type="button"><span class="like-button__button__icon material-icons js-like-button__icon">favorite_border</span><span class="like-button__button__likes js-like-button__likes">2</span></button>
+            <button class="like-button__button js-like-button__button" type="button"><span class="like-button__button__icon material-icons js-like-button__icon">favorite</span><span class="like-button__button__likes js-like-button__likes">12</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__rate-buttons">
+        <div class="rate-button">
+          <p class="rate-button__title">Rate button</p>
+          <div class="rate-button__group">
+            <div class="rate-button__box"> <span class="rate-button__icon material-icons">star</span><span class="rate-button__icon material-icons">star</span><span class="rate-button__icon material-icons">star</span><span class="rate-button__icon material-icons">star</span><span class="rate-button__icon material-icons">star_border</span>
+            </div>
+            <div class="rate-button__box"> <span class="rate-button__icon material-icons">star</span><span class="rate-button__icon material-icons">star</span><span class="rate-button__icon material-icons">star</span><span class="rate-button__icon material-icons">star</span><span class="rate-button__icon material-icons">star</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gap"></div>
+    <div class="third-column">
+      <div class="form-elements__range-slider">
+        <div class="range-slider">
+          <div class="range-slider__header">
+            <p class="range-slider__title">Range slider</p>
+            <div class="range-slider__count"> 
+              <input class="range-slider__input-min" value="0"/><span class="range-slider__separator">-</span>
+              <input class="range-slider__input-max" value="16000"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__buttons">
+        <div class="buttons"> 
+          <p class="buttons__title">Buttons</p>
+          <div class="buttons__box"> 
+            <div class="buttons__first-box">
+              <button class="button button_purple">
+                <p class="button__text button__text_white">click me</p>
+              </button>
+              <button class="button button_purple button_blocked">
+                <p class="button__text button__text_white">click me</p>
+              </button>
+            </div>
+            <div class="buttons__second-box"> 
+              <button class="button button_white">
+                <p class="button__text button__text_purple">click me</p>
+              </button>
+              <button class="button button_white button_blocked">
+                <p class="button__text button__text_purple">click me</p>
+              </button>
+            </div>
+            <div class="buttons__third-box"> 
+              <button class="button button_transparent">
+                <p class="button__text button__text_purple">click me </p>
+              </button>
+              <button class="button button_transparent button_blocked">
+                <p class="button__text button__text_">click me </p>
+              </button>
+            </div>
+            <div class="buttons__fourth-box"><a class="button__link" href="#">
+                <button class="button button_purple button_forward"> 
+                  <p class="button__text button__text_white">Перейти к оплате</p><span class="material-symbols-outlined">arrow_forward</span>
+                </button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__pagination">
+        <div class="pagination" actpage="1">
+          <p class="pagination__title">Pagination</p>
+          <div class="pagination__box">
+            <div class="pagination__pages"><a class="pagination__page pagination__arrow-previous material-symbols-outlined" href="#!-1"><a class="pagination__page" href="#!1">1</a><a class="pagination__page" href="#!2">2</a><a class="pagination__page" href="#!3">3</a><a class="pagination__page" href="#!4">4</a><a class="pagination__page" href="#!5">5</a><a class="pagination__page" href="#!6">6</a><a class="pagination__page" href="#!7">7</a><a class="pagination__page" href="#!8">8</a><a class="pagination__page" href="#!9">9</a><a class="pagination__page" href="#!10">10</a><a class="pagination__page" href="#!11">11</a><a class="pagination__page" href="#!12">12</a><a class="pagination__page" href="#!13">13</a><a class="pagination__page" href="#!14">14</a><a class="pagination__page" href="#!15">15</a></a><a class="pagination__page pagination__arrow-forward material-symbols-outlined" href="#!+1"></a></div>
+            <p class="pagination__caption"><span class="pagination__from">1</span><span> – </span><span class="pagination__to">12 </span><span> из 100+ вариантов аренды</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-elements__content">
+    <div class="first-column">
+      <div class="form-elements__dropdown-beds">
+        <div class="dropdown">
+          <div class="dropdown__title">Dropdown</div>
+          <div class="dropdown__subtitle">Default</div>
+          <div class="dropdown__box">
+            <input class="dropdown__input js-dropdown__input--rooms" placeholder="2 спальни, 2 кровати" readonly="readonly"/>
+            <button class="dropdown__button" type="button"><span class="dropdown__icon material-icons"></span></button>
+            <ul class="dropdown__list dropdown__list-shrinked--rooms">
+              <li class="dropdown__list-item dropdown__list-item-shrinked--rooms">
+                <p class="dropdown__list-item__caption">Спальни</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-bedrooms">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-bedrooms">2</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-bedrooms">+</button>
+                </div>
+              </li>
+              <li class="dropdown__list-item dropdown__list-item-shrinked--rooms">
+                <p class="dropdown__list-item__caption">Кровати</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-beds">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-beds">2</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-beds">+</button>
+                </div>
+              </li>
+              <li class="dropdown__list-item dropdown__list-item-shrinked--rooms">
+                <p class="dropdown__list-item__caption">Ванные комнаты</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-bathrooms">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-bathrooms">0</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-bathrooms">+</button>
+                </div>
+              </li>
+              <li class="dropdown__footer-section_invisible">
+                <button class="dropdown__clear-button dropdown__clear-button-invisible" type="button"><span class="dropdown__clear-button__caption_invisible">Очистить</span></button>
+                <button class="dropdown__submit-button dropdown__submit-button_invisible" type="button"><span class="dropdown__submit-button__caption">Применить</span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="form-elements__dropdown-beds_expanded">
+        <div class="dropdown">
+          <div class="dropdown__title">Dropdown</div>
+          <div class="dropdown__subtitle">Expanded</div>
+          <div class="dropdown__box">
+            <input class="dropdown__input js-dropdown__input--rooms" placeholder="2 спальни, 2 кровати" readonly="readonly"/>
+            <button class="dropdown__button" type="button"><span class="dropdown__icon material-icons"></span></button>
+            <ul class="dropdown__list dropdown__list-expanded--rooms">
+              <li class="dropdown__list-item dropdown__list-item-expanded--rooms">
+                <p class="dropdown__list-item__caption">Спальни</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-bedrooms">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-bedrooms">2</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-bedrooms">+</button>
+                </div>
+              </li>
+              <li class="dropdown__list-item dropdown__list-item-expanded--rooms">
+                <p class="dropdown__list-item__caption">Кровати</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-beds">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-beds">2</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-beds">+</button>
+                </div>
+              </li>
+              <li class="dropdown__list-item dropdown__list-item-expanded--rooms">
+                <p class="dropdown__list-item__caption">Ванные комнаты</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-bathrooms">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-bathrooms">0</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-bathrooms">+</button>
+                </div>
+              </li>
+              <li class="dropdown__footer-section_invisible">
+                <button class="dropdown__clear-button dropdown__clear-button-invisible" type="button"><span class="dropdown__clear-button__caption_invisible">Очистить</span></button>
+                <button class="dropdown__submit-button dropdown__submit-button_invisible" type="button"><span class="dropdown__submit-button__caption">Применить</span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gap"> </div>
+    <div class="second-column">
+      <div class="form-elements__dropdown-guests">
+        <div class="dropdown">
+          <div class="dropdown__title">Dropdown</div>
+          <div class="dropdown__box">
+            <input class="dropdown__input js-dropdown__input--guests" placeholder="Сколько гостей" readonly="readonly"/>
+            <button class="dropdown__button" type="button"><span class="dropdown__icon material-icons"></span></button>
+            <ul class="dropdown__list dropdown__list-expanded--guests">
+              <li class="dropdown__list-item dropdown__list-item-expanded--guests">
+                <p class="dropdown__list-item__caption">Взрослые</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-adults">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-adults">0</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-adults">+</button>
+                </div>
+              </li>
+              <li class="dropdown__list-item dropdown__list-item-expanded--guests">
+                <p class="dropdown__list-item__caption">Дети</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-children">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-children">0</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-children">+</button>
+                </div>
+              </li>
+              <li class="dropdown__list-item dropdown__list-item-expanded--guests">
+                <p class="dropdown__list-item__caption">Младенцы</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-babies">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-babies">0</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-babies">+</button>
+                </div>
+              </li>
+              <li class="dropdown__footer-section_visible">
+                <button class="dropdown__clear-button dropdown__clear-button-invisible" type="button"><span class="dropdown__clear-button__caption_visible">Очистить</span></button>
+                <button class="dropdown__submit-button dropdown__submit-button_visible" type="button"><span class="dropdown__submit-button__caption">Применить</span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gap"> </div>
+    <div class="third-column">
+      <div class="form-elements__dropdown-guests_second">
+        <div class="dropdown">
+          <div class="dropdown__title">Dropdown</div>
+          <div class="dropdown__box">
+            <input class="dropdown__input js-dropdown__input--guests" placeholder="Сколько гостей" readonly="readonly"/>
+            <button class="dropdown__button" type="button"><span class="dropdown__icon material-icons"></span></button>
+            <ul class="dropdown__list dropdown__list-expanded--guests">
+              <li class="dropdown__list-item dropdown__list-item-expanded--guests">
+                <p class="dropdown__list-item__caption">Взрослые</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-adults">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-adults">0</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-adults">+</button>
+                </div>
+              </li>
+              <li class="dropdown__list-item dropdown__list-item-expanded--guests">
+                <p class="dropdown__list-item__caption">Дети</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-children">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-children">0</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-children">+</button>
+                </div>
+              </li>
+              <li class="dropdown__list-item dropdown__list-item-expanded--guests">
+                <p class="dropdown__list-item__caption">Младенцы</p>
+                <div class="dropdown__list-item__counter-box">
+                  <button class="dropdown__list-item__counter-button-minus js-dropdown__list-item__counter-button-minus-babies">-</button>
+                  <p class="dropdown__list-item__counter js-dropdown__list-item__counter-babies">0</p>
+                  <button class="dropdown__list-item__counter-button-plus js-dropdown__list-item__counter-button-plus-babies">+</button>
+                </div>
+              </li>
+              <li class="dropdown__footer-section_visible">
+                <button class="dropdown__clear-button dropdown__clear-button-invisible" type="button"><span class="dropdown__clear-button__caption_visible">Очистить</span></button>
+                <button class="dropdown__submit-button dropdown__submit-button_visible" type="button"><span class="dropdown__submit-button__caption">Применить</span></button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-elements__content">
+    <div class="first-column">
+      <div class="form-elements__checkbox-expandable">
+        <div class="checkbox">
+          <div class="checkbox__header checkbox__header_expandable">
+            <p class="checkbox__title">Expandable Checkbox List</p>
+            <button class="checkbox__button" type="button"><span class="checkbox__icon material-symbols-outlined"></span></button>
+          </div>
+          <ul class="checkbox__list checkbox__list_expandable">
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="breakfast"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Завтрак</span>
+              </label>
+            </li>
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="desk" checked="checked"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Письменный стол</span>
+              </label>
+            </li>
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="feeding-chair" checked="checked"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Стул для кормления</span>
+              </label>
+            </li>
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="bed" checked="checked"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Кроватка</span>
+              </label>
+            </li>
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="tv"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Телевизор</span>
+              </label>
+            </li>
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="shampoo"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Шампунь</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="form-elements__checkbox-expanded">
+        <div class="checkbox">
+          <div class="checkbox__header checkbox__header_expandable">
+            <p class="checkbox__title">Expandable Checkbox List</p>
+            <button class="checkbox__button checkbox__button_transform" type="button"><span class="checkbox__icon material-symbols-outlined"></span></button>
+          </div>
+          <ul class="checkbox__list checkbox__list_expandable checkbox__list_expandable-expanded">
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="breakfast"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Завтрак</span>
+              </label>
+            </li>
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="desk" checked="checked"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Письменный стол</span>
+              </label>
+            </li>
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="feeding-chair" checked="checked"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Стул для кормления</span>
+              </label>
+            </li>
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="bed" checked="checked"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Кроватка</span>
+              </label>
+            </li>
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="tv"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Телевизор</span>
+              </label>
+            </li>
+            <li class="checkbox__item">
+              <label class="checkbox__label">
+                <input class="checkbox__input" type="checkbox" name="shampoo"/><span class="checkbox__checkbox"></span><span class="checkbox__caption">Шампунь</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="gap"> </div>
+    <div class="second-column">
+      <div class="form-elements__checkbox-rich">
+        <div class="rich-checkbox">
+          <p class="rich-checkbox__header">Rich сheckbox buttons</p>
+          <ul class="rich-checkbox__list"> 
+            <li class="rich-checkbox__item">
+              <label class="rich-checkbox__label">
+                <input class="rich-checkbox__input" type="checkbox" name="corridor size"/><span class="rich-checkbox__checkbox"></span><span class="rich-checkbox__title">Широкий коридор</span><span class="rich-checkbox__subtitle">Ширина коридоров в номере не менее 91 см.</span>
+              </label>
+            </li>
+            <li class="rich-checkbox__item">
+              <label class="rich-checkbox__label">
+                <input class="rich-checkbox__input" type="checkbox" name="helper"/><span class="rich-checkbox__checkbox"></span><span class="rich-checkbox__title">Помощник для инвалидов</span><span class="rich-checkbox__subtitle">На 1 этаже вас встретит специалист и проводит до номера.</span>
+              </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="gap"> </div>
+    <div class="third-column">
+      <div class="form-elements__bullet-list">
+        <div class="bullet-list">
+          <p class="bullet-list__header">Bullet list</p>
+          <ul class="bullet-list__list">
+            <li class="bullet-list__item">
+              <div class="bullet-list__ellipse"></div>
+              <div class="bullet-list__caption">Нельзя с питомцами</div>
+            </li>
+            <li class="bullet-list__item">
+              <div class="bullet-list__ellipse"></div>
+              <div class="bullet-list__caption">Без вечеринок и мероприятий</div>
+            </li>
+            <li class="bullet-list__item">
+              <div class="bullet-list__ellipse"></div>
+              <div class="bullet-list__caption">Время прибытия — после 13:00, а выезд до 12:00</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-elements__content">
+    <div class="first-column">
+      <div class="form-elements__description">
+        <div class="description"><span class="description__image material-icons">insert_emoticon</span>
+          <p class="description__title">Комфорт</p>
+          <p class="description__subtitle">Шумопоглощающие стены</p>
+        </div>
+        <div class="description"><span class="description__image material-icons">location_city</span>
+          <p class="description__title">Удобство</p>
+          <p class="description__subtitle">Окно в каждой из спален</p>
+        </div>
+      </div>
+    </div>
+    <div class="gap"> </div>
+    <div class="second-column">
+      <div class="form-elements__feedbacks">
+        <div class="feedback">
+          <div class="feedback__content"><img class="feedback__image" src="../../assets/images/profile.jpg" alt="Фото 1"/>
+            <div class="feedback__author"> 
+              <p class="feedback__author--name">Мурад Сарафанов</p>
+              <p class="feedback__author--date">5 дней назад</p>
+            </div>
+            <div class="feedback__likes">
+              <div class="like-button">
+                <div class="like-button__box">
+                  <button class="like-button__button js-like-button__button" type="button"><span class="like-button__button__icon material-icons js-like-button__icon">favorite</span><span class="like-button__button__likes js-like-button__likes">12</span></button>
+                </div>
+              </div>
+            </div>
+            <p class="feedback__text">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script src="../../components/__range-slider/__range-slider.js"></script>
+<script src="../../assets/libs/masked-field.js"></script>
+<script src="../../components/__pagination/__pagination.js"></script>
+<script type="module" src="../../components/__datepicker/__datepicker.js"></script>
+<script src="../../components/__dropdown/__dropdown.js"></script>
+<script src="../../components/__like-button/__like-button.js"></script>
+<script src="../../components/__checkbox/__checkbox.js"></script>
+<script src="./form-elements.js"></script>

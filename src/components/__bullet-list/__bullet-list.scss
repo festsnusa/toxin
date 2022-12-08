@@ -1,0 +1,40 @@
+.bullet-list {
+    width: 100%;
+    max-width: 16.45rem;
+
+    &__header {
+      font-size: .75rem;
+      @extend .bold;
+      text-transform: uppercase;
+      line-height: .9375rem;
+      margin-bottom: 0.85rem;
+    }
+
+    &__list {
+      list-style: none;
+    }
+
+    &__item {
+      display: grid;
+      padding-bottom: .675rem;
+      grid-template-areas: "ellipse caption";
+      grid-template-columns: 0.625rem auto;
+      column-gap: 0.65rem;
+    }
+
+    &__ellipse {
+      grid-area: ellipse;
+      width: 0.625rem;
+      height: 0.625rem;
+      background: $darkShade25;
+      border-radius: 50%;
+      margin-top: 0.4rem;
+    }
+
+    &__caption {
+      grid-area: caption;
+      font-size: .875rem;
+      line-height: 1.5rem;
+      color: $darkShade75;
+    }
+  }

@@ -1,0 +1,36 @@
+.description {
+    display: grid;
+    width: 100%;
+    max-width: 18.1875rem;
+    grid-template: 1.5rem 1.55rem/3rem auto;
+    grid-template-areas: "image title" "image subtitle";
+    column-gap: 0.55rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.15rem;
+    border-bottom: 1px solid $darkShade5;
+
+    &__image {
+      grid-area: image;
+      color: transparent;
+      background: $linearGradientPurple;
+      -webkit-background-clip: text;
+      background-clip: text;
+      font-size: 3rem;
+    }
+
+    &__title,
+    &__subtitle {
+      font-size: .875rem;
+      color: $darkShade75;
+      line-height: 1.5rem;
+    }
+
+    &__title {
+      grid-area: title;
+      @extend .bold;
+    }
+
+    &__subtitle {
+      grid-area: subtitle;
+    }
+  }

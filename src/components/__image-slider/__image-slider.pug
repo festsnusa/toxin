@@ -1,0 +1,16 @@
+mixin createSlideshowContainer(images)
+  -let index = 1
+  .slideshow-container
+    each value in images
+      .mySlides.fade
+        img.slideshow-container__image(src= value["src"] alt= value["alt"])
+        -index++
+    .slideshow-container__button.slideshow-container__prev
+      a.slideshow-container__icon.material-symbols-outlined
+    .slideshow-container__button.slideshow-container__next
+      a.slideshow-container__icon.material-symbols-outlined
+    .slideshow-container__dots
+      -index= 1
+      each value in images
+        .slideshow-container__dot
+        -index++

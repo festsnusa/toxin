@@ -1,0 +1,46 @@
+include ../../components/__inputs/__inputs.pug
+
+mixin createNavigationColumn(arr, title)
+  .footer__navigation-column
+    p.footer__title= title
+    ul.footer__navigation-list
+      each value in arr
+        li.footer__navigation-item
+          a.footer__navigation-link(href="#")= value
+
+mixin createLinks(data, small)
+
+  -let listClass = (small) ? '_small' : ''
+  ul(class= `footer__copyright-list${listClass}`)
+    each value in data 
+      li.footer__copyright-item
+        a.footer__copyright-link(href= value["href"] target="_blank")
+          img(src= value["img"])
+
+mixin createFooterContent(small)
+
+  -let smallClass = (small) ? '_small' : ''
+  div(class= `footer__content${smallClass}`)
+    div(class=`footer__description${smallClass}`)
+      .footer__logo 
+        a.logo(href="#")
+          img.logo__image(src="../../assets/images/logo.svg" alt="Лого Toxin")
+      p(class= `footer__description-text${smallClass}`) Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды» 
+    div(class= `footer__navigation${smallClass}`)
+      +createNavigationColumn(["О нас", "Новости", "Служба поддержки", "Услуги"], "Навигация")
+      +createNavigationColumn(["О сервисе", "Наша команда", "Вакансии", "Инвесторы"], "О нас")
+      +createNavigationColumn(["Соглашения", "Сообщества", "Связь с нами"], "Служба поддержки")
+    div(class= `footer__subscription${smallClass}`)
+      .footer__title Подписка
+      .footer__subscription-text Получайте специальные предложения и новости сервиса
+      .footer__input 
+        +createSubscriptionField(title='')
+  div(class=`footer__copyright${smallClass}`)
+    p(class= `footer__copyright-text${smallClass}`) Copyright © 2018 Toxin отель. Все права защищены.
+    +createLinks([{href: "http://twitter.com", img: "../../assets/images/twitter.svg"}, {href: "http://facebook.com", img: "../../assets/images/facebook.svg"}, {href: "http://instagram.com", img: "../../assets/images/instagram.svg"}], small)
+
+mixin createFooter
+  .footer
+    +createFooterContent(false)
+  .footer_small
+    +createFooterContent(true)

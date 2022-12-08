@@ -1,0 +1,88 @@
+@import '../../components/__pages/_pages';
+@import '../../assets/libs/_vars';
+@import '../../assets/libs/_fonts';
+
+@import '../../components/__header/_header';
+@import '../../components/__footer/_footer';
+
+@import '../../components/__buttons/_buttons';
+@import '../../components/__description/_description';
+@import '../../components/__feedback/_feedback';
+@import '../../components/__like-button/_like-button';
+@import '../../components/__bullet-list/_bullet-list';
+@import '../../components/__datepicker/_datepicker';
+@import '../../components/__dropdown/_dropdown';
+@import '../../components/__booking-form/_booking-form';
+
+@import '../../components/__image-section/_image-section';
+@import '../../components/__chart/_chart';
+
+.room-details {
+  
+  overflow: hidden;
+
+  &__content {
+    display: grid;
+    padding-top: 4.3rem;
+    grid-template-columns: 1fr 23.75rem;
+    column-gap: 4.375rem;
+    grid-template-areas: "description bookingCard" "feedbacks bookingCard" "rules bookingCard";
+  }
+
+  &__description {
+    grid-area: description;
+    display: grid;
+    grid-template-columns: 1fr 1.116fr;
+    padding-bottom: 0.8rem;
+  }
+
+  &__room-info {
+    margin-left: 0.125rem;
+
+    &-title {
+      @extend .bold;
+      font-size: 1.1875rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__feedbacks {
+    grid-area: feedbacks;
+    padding-bottom: 0.063rem;
+  }
+
+  &__rules {
+    grid-area: rules;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 0.4rem;
+    padding-bottom: 3.7rem;
+    column-gap: 0.8rem;
+  }
+
+  &__bullet-list-title, 
+  &__cancellation-details-title {
+    @extend .bold;
+    font-size: 1.1875rem;
+    line-height: 1.5rem;
+  }
+
+  &__cancellation-details-text {
+    max-width: 21.563rem;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    color: $darkShade75;
+  }
+
+  &__booking-card {
+    grid-area: bookingCard;
+    margin-top: 0.0625rem;
+    justify-self: center;
+  }
+
+  &__image-section {
+    display: grid;
+    grid-template-columns: 68% 32%;
+    max-height: 485px;
+  }
+}

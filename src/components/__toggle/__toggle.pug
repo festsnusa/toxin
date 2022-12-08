@@ -1,0 +1,10 @@
+mixin toggle(array, title='')
+	.toggle
+		if (title != '')
+			p.toggle__title= title
+		ul.toggle__list
+			each value in array
+				li.toggle__item
+					label.toggle__label
+						input.toggle__input(type="checkbox" checked= value[0])
+						span.toggle__caption= value[1]

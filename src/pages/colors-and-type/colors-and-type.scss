@@ -1,0 +1,152 @@
+@import '../../assets/libs/_vars';
+@import '../../assets/libs/_fonts';
+
+$boxSize: 4.3rem;
+
+.nav {
+    padding: 1.9rem 0.7rem;
+    margin: 0 auto 2.3rem;
+    max-width: 98%;
+}
+
+.main {
+
+    display: grid;
+    margin: 0 auto;
+    max-width: 97%;
+    grid-template-columns: 16.875rem 28rem;
+    grid-column-gap: 29.2%;
+
+    &__colors {
+        display: grid;
+        grid-auto-flow: row;
+        grid-gap: 1.25rem;
+        margin-left: 7.6rem;
+    }
+
+    &__types {
+        display: grid;
+        align-content: start;
+        grid-row-gap: 3rem;
+    }
+}
+
+.color {
+
+    display: grid;
+    grid-template-areas: "box title" "box subtitle";
+    grid-column-gap: 2.5rem;
+    align-items: center;
+    justify-content: start;
+
+    &__box {
+        grid-area: box;
+        width: $boxSize;
+        height: $boxSize;
+        border-radius: 0.375rem;
+    }
+
+    &__title,
+    &__subtitle {
+        font-size: 1.1875rem;
+        line-height: 1.1875rem;
+    }
+
+    &__title {
+        grid-area: title;
+        @extend .bold;
+        width: max-content;
+    }
+
+    &__subtitle {
+        grid-area: subtitle;
+        align-self: flex-start;
+    }
+
+    $map: ('darkShade100': $darkShade100, 'darkShade75': $darkShade75, 'darkShade50': $darkShade50, 'darkShade25': $darkShade25, 'darkShade5': $darkShade5, 'purple': $purple, 'green': $green);
+
+    @each $key, $value in $map {
+
+        &_#{$key} &__box {
+            background: #{$value};
+        }
+
+    }
+}
+
+.tag-example {
+
+    $root: &;
+
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    column-gap: 1.9rem;
+
+    &__title {
+        text-transform: uppercase;
+        color: $darkShade25;
+        text-align: right;
+    }
+
+    &__subtitle {
+        @extend .bold;
+    }
+
+    &_h1 {
+
+        margin-bottom: 0.3125rem;
+
+        #{$root}__subtitle,
+        #{$root}__title {
+            font-size: 1.5rem;
+            line-height: 1.8125rem;
+
+        }
+
+        #{$root}__subtitle {
+            @extend .bold;
+        }
+
+    }
+
+    &_h2 {
+        margin-bottom: 0.0625rem;
+
+        #{$root}__subtitle,
+        #{$root}__title {
+            font-size: 1.188rem;
+            line-height: 1.5rem;
+        }
+
+    }
+
+    &_h3 {
+        font-size: .75rem;
+        text-transform: uppercase;
+        line-height: .9375rem;
+
+        #{$root}__title {
+            color: $darkShade25;
+        }
+    }
+
+    &_body {
+        max-width: 23.75rem;
+        color: $darkShade50;
+
+        #{$root}__title,
+        #{$root}__subtitle {
+            font-size: 0.875rem;
+        }
+
+        #{$root}__title {
+            text-transform: capitalize;
+        }
+
+        #{$root}__subtitle {
+            font-family: 'Montserrat';
+            line-height: 1.5rem;
+        }
+    }
+
+}

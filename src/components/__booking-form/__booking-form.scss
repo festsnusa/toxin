@@ -1,0 +1,186 @@
+.booking-form {
+
+  $root: &;
+
+  background: #fff;
+  border: 0.0625rem solid $darkShade25;
+  // box-shadow: 0 0 1.5625rem rgb(0 0 0 / 20%);
+  padding: 2.4rem 1.85rem 1.85rem 1.8rem;
+  border-radius: 0.25rem;
+  max-width: 23.75rem;
+  margin-top: 0.2rem;
+
+  &__room {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.35rem;
+  }
+  
+  &__price-section {
+    display: flex;
+    align-items: baseline;
+  }
+  
+  &__room-section {
+  
+    display: flex;
+    align-items: baseline;
+  
+    @extend .bold;
+  
+    &__number {
+      font-size: .875rem;
+      // margin-left: 0.2rem;
+      // margin-right: 0.45rem;
+  
+      &_booking {
+        font-size: 1.5rem;
+        margin-left: 0.2rem;
+        margin-right: 0.45rem;
+  
+      }
+    }
+  
+    &__luxe {
+      font-size: .75rem;
+      text-transform: uppercase;
+      color: $purple;
+    }
+  
+  }
+
+  &__price-section {
+
+    display: flex;
+    align-items: baseline;
+    margin-top: 0.5rem;
+  }
+
+  &__price,
+  &__per-day {
+    color: $darkShade50;
+  }
+
+  &__price {
+    font-size: .875rem;
+    margin-right: 0.25rem;
+    @extend .bold;
+  }
+
+  &__per-day {
+    font-size: 0.75rem;
+  }
+
+  
+
+  &__arrival {
+    margin-bottom: 1.25rem;
+  }
+
+  &__dropdown {
+    margin-bottom: 1.3rem;
+  }
+
+  &__total-per-days,
+  &__discounts,
+  &__additional-services {
+    display: grid;
+    grid-template-columns: 67.5% 10% 22.5%;
+    column-gap: 0.2rem;
+  }
+
+  &__total-per-days {
+    margin-bottom: 1rem;
+  }
+
+  &__discounts {
+    align-items: center;
+    margin-bottom: 0.9rem;
+  }
+
+  &__additional-services {
+    margin-bottom: 1.85rem;
+  }
+
+  &__multiplied {
+
+    font-size: .875rem;
+    color: $darkShade75;
+
+    &-result {
+      @extend #{$root}__multiplied;
+      grid-column: span 2;
+      justify-self: end;
+      margin-right: 0.313rem;
+    }
+  }
+
+  &__ellipse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid $darkShade25;
+    color: $darkShade25;
+    cursor: pointer;
+  }
+
+  &__info {
+    width: 0.25rem;
+    height: 0.875rem;
+    @extend .bold;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+
+    &:hover:after { 
+      position: relative;
+      bottom: 2.1875rem;
+      // left: 1.5625rem;
+      content: attr(data-title); 
+      font-size: .875rem;
+      background: grey;
+      border-radius: 0.5rem 0.5rem 0.5rem 0;
+      color: #fff;
+      padding: 0.1875rem 0.4375rem;
+      transition: all .4s ease-in-out;
+     }
+  }
+
+  &__service,
+  &__amount {
+    font-size: .875rem;
+    color: $darkShade75;
+  }
+
+  &__amount {
+    justify-self: end;
+    margin-right: 0.313rem;
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.3rem;
+
+    &-caption {
+      min-width: 3.75rem;
+    }
+  }
+
+  &__total-caption,
+  &__result {
+    font-size: 1.188rem;
+    @extend .bold;
+  }
+
+  &__dots {
+    width: 100%;
+    border-bottom: 0.063rem dashed $darkShade25;
+    margin-bottom: 0.3rem;
+    margin-right: 0.5rem;
+  }
+
+}

@@ -1,0 +1,173 @@
+.pagination {
+  position: relative;
+  // text-align: center;
+  // padding: 20px 0;
+  // font-size: 0;
+  z-index: 6;
+  min-width: 23rem;
+  // margin: 50px 0;
+
+  &__title {
+    font-size: .75rem;
+    @extend .bold;
+    text-transform: uppercase;
+    margin-bottom: 1.05rem;
+  }
+
+  &__caption {
+    font-size: 0.875rem;
+    color: $darkShade75;
+    margin-left: 0.4rem;
+    // letter-spacing: 0.001rem;
+  }
+
+  &__box {
+    // display: flex;
+    // height: 4.688rem;
+    max-width: 20rem;
+  }
+
+  &__arrow-previous,
+  &__arrow-forward {
+    background: $linearGradientGreen;
+  }
+
+  &__arrow-previous {
+    position: relative;
+
+    // top: 5px;
+    &:before {
+      content: 'arrow_back';
+      position: absolute;
+      top: 0.4rem;
+      left: 0.5rem;
+    }
+  }
+
+  &__arrow-forward {
+    position: relative;
+    // top: 5px;
+
+    &:before {
+      content: 'arrow_forward';
+      position: absolute;
+      top: 0.4rem;
+      left: 0.5rem;
+    }
+  }
+
+  &__pages {
+    display: flex;
+    margin-bottom: 0.7rem;
+  }
+
+  &__page {
+    font-size: .75rem;
+    text-decoration: none;
+    display: inline-block;
+    // margin: 0 3px 6px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 50%;
+    line-height: 38px;
+    padding: 0;
+    color: $darkShade50;
+    letter-spacing: .03em;
+    display: none;
+    text-align: center;
+
+    // &:first-child,
+    // &:last-child {
+    //   // margin: 0 12px 6px;
+    // }
+
+    &:last-child,
+    &:nth-child(2),
+    &:nth-last-child(2) {
+      display: inline-block;
+    }
+  }
+
+  &__page:hover {
+    background: $darkShade25;
+  }
+
+  &:not([actpage="1"]) &__page:nth-child(1) {
+    display: inline-block;
+  }
+
+  .material-symbols-outlined {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+}
+
+@for $i from 1 through 80 {
+
+  .pagination[actpage="#{$i}"] {
+
+    // 2 before
+    .pagination__page:nth-child(#{$i - 2}):not(:first-child):not(:nth-child(2)) {
+
+      display: inline-block;
+      pointer-events: none;
+      color: transparent;
+      border-color: transparent;
+      width: 50px;
+
+      &:after {
+        content: '...';
+        color: $darkShade50;
+        font-size: .75rem;
+        margin-left: -6px;
+      }
+
+    }
+
+    .pagination__page:nth-child(#{$i - 1}):not(:first-child) {
+      display: inline-block;
+    }
+
+    // before
+    .pagination__page:nth-child(#{$i}):not(:first-child) {
+      display: inline-block;
+    }
+
+    // active
+    .pagination__page:nth-child(#{$i + 1}) {
+
+      background: $linearGradientPurple;
+      color: #fff;
+      display: inline-block;
+
+      +.pagination__page:last-child {
+        display: none !important;
+      }
+    }
+
+    // next
+    .pagination__page:nth-child(#{$i + 2}):not(:last-child) {
+      display: inline-block;
+    }
+
+    // 2 next
+    .pagination__page:nth-child(#{$i + 3}):not(:last-child) {
+      display: inline-block;
+    }
+
+    .pagination__page:nth-child(#{$i + 4}):not(:last-child):not(:nth-last-child(2)) {
+      display: inline-block;
+      pointer-events: none;
+      color: transparent;
+      border-color: transparent;
+      width: 50px;
+
+      &:after {
+        content: '...';
+        color: $darkShade50;
+        font-size: .75rem;
+        margin-left: -6px;
+      }
+    }
+  }
+}

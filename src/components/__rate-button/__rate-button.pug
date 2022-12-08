@@ -1,0 +1,15 @@
+mixin buttonColored
+	span.rate-button__icon.material-icons star
+
+mixin buttonColorless
+	span.rate-button__icon.material-icons star_border
+
+mixin rateButton(i)
+	-let colorlessNum= 5-i
+	.rate-button__box 
+		while i > 0
+			+buttonColored
+			- i--
+		while colorlessNum > 0
+			+buttonColorless
+			- colorlessNum--

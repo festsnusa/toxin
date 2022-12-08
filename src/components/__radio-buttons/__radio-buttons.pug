@@ -1,0 +1,13 @@
+mixin createRadioButton(data, title='')
+	.radio-buttons
+		if (title !='')
+			p.radio-buttons__title= title
+
+		.radio-buttons__box
+			.radio-buttons__item
+				each value in data
+					label.radio-buttons__label
+						input.radio-buttons__input(type="radio" name= value[0] checked= value[1])
+						span.radio-buttons__radio
+						span.radio-buttons__caption= value[2]
+					//- span.radio-buttons__caption= value[2]

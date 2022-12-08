@@ -1,0 +1,9 @@
+mixin createBulletList(options, title = '')
+  .bullet-list
+    if (title != '')
+      p.bullet-list__header= title
+    ul.bullet-list__list
+      each option in options
+        li.bullet-list__item
+          .bullet-list__ellipse
+          .bullet-list__caption= option

@@ -1,0 +1,13 @@
+mixin createLoginFormCard
+  .login-form
+    .login-form__header
+      p.login-form__title Войти
+    .login-form__email
+      +createInput({class: "default", inputType: "text", name: "email", placeholder: "Email"})
+    .login-form__password
+      +createInput({class: "default", inputType: "text", name: "password", placeholder: "Пароль"})
+    .login-form__button
+      +createProceedButton("Войти")
+    .login-form__box
+      p.login-form__caption Нет аккаунта на Toxin?
+      +createButton("Создать", "white", "purple", false)

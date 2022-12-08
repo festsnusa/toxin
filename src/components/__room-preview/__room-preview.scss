@@ -1,0 +1,94 @@
+.room-preview {
+
+  background: #fff;
+  border-radius: 0.25rem;
+
+  &__description {
+    padding: 0 1.0625rem 0 1.25rem;
+  }
+
+  &__header {
+    border-bottom: 1px solid rgba(31,32,65,.101961);
+    margin-bottom: 0.5rem;
+  }
+
+  &__room {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.35rem;
+
+    &-section {
+      display: flex;
+      @extend .bold;
+      align-items: baseline;
+
+      &__number {
+        font-size: .875rem;
+
+        &_booking {
+          font-size: 1.1875rem;
+          margin-left: 0.25rem;
+          margin-right: 0.6rem;
+        }
+      }
+
+      &__luxe {
+        color: $purple;
+        text-transform: uppercase;
+        font-size: .75rem;
+      }
+    }
+  }
+
+  &__price-section {
+    display: flex;
+    align-items: baseline;
+    margin-top: 0.3rem;
+  }
+
+  &__price,
+  &__per-day {
+    color: $darkShade50;
+  }
+
+  &__price {
+    font-size: 0.875rem;
+    margin-right: 0.25rem;
+    @extend .bold;
+  }
+
+  &__per-day {
+    font-size: .75rem;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    padding-bottom: 1rem;
+  }
+
+  &__feedbacks {
+    display: flex;
+    padding-top: 0.125rem;
+
+    &_number, &_text {
+      font-size: .875rem;
+      color: $darkShade50;
+    }
+
+    &_number {
+      @extend .bold;
+      margin-right: 0.35rem;
+    }
+
+    &_text {
+      margin-right: 0.1rem;
+    }
+  }
+
+  
+}

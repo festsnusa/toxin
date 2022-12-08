@@ -1,0 +1,199 @@
+.date-picker {
+
+  display: none;
+  position: absolute;
+  z-index: 5;
+  background: #fff;
+
+  &__active {
+    display: block;
+    max-width: 20rem;
+    width: 100%;
+
+    &_relative {
+      position: relative;
+    }
+  }
+}
+
+.calendar {
+  // margin: 10px;
+  border: 0.0625rem solid $darkShade25;
+  max-width: 320px;
+
+  &__header {
+    font-family: 'Montserrat Bold';
+    font-size: 1.188rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.3rem;
+    margin-bottom: 2.6rem;
+
+    &_back,
+    &_fwd {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      color: $purple;
+    }
+
+    &_back {
+      margin-left: 1.2rem;
+    }
+
+    &_fwd {
+      margin-right: 1.2rem;
+    }
+    
+    &_back {
+      &_invisible {
+        visibility: hidden;
+      }
+    }
+
+  }
+
+  &__content {
+    margin: 10px;
+
+    &__header {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 0.8rem;
+
+      &__daysOfTheWeek {
+        min-width: 40px;
+        text-align: center;
+        color: $purple;
+        font-size: .75rem;
+        font-family: 'Montserrat Bold';
+        text-transform: capitalize;
+      }
+    }
+
+    &__dates {
+      margin-bottom: 1.25rem;
+    }
+
+    &__week {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__day {
+      cursor: pointer;
+      color: $darkShade50;
+      font-size: .75rem;
+      min-height: 40px;
+      min-width: 40px;
+      text-align: center;
+      display: inline;
+      line-height: 40px;
+
+      &:hover {
+        background: $darkShade25;
+        border-radius: 50%;
+      }
+
+      &__current {
+        color: white;
+        background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+        border-radius: 50%;
+      }
+
+      &__another {
+        color: $darkShade25;
+
+        &_past {
+          color: $darkShade25;
+          pointer-events: none;
+        }
+      }
+
+      &__selected {
+        color: #fff;
+        background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+        border-radius: 50%;
+      }
+
+      &__between {
+        position: relative;
+
+        &:before {
+          z-index: 3;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: transparent;
+          background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+          opacity: 0.25;
+        }
+      }
+
+      &__start {
+        position: relative;
+
+        &:before {
+          z-index: 6;
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          background: transparent;
+          background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+          opacity: 0.25;
+          width: 50%;
+        }
+      }
+
+      &__end {
+        position: relative;
+
+        &:before {
+          z-index: 6;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          background: transparent;
+          background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+          opacity: 0.25;
+          width: 50%;
+        }
+      }
+    }
+
+    &__footer {
+
+      display: flex;
+      justify-content: space-between;
+      border: none;
+      margin-left: 0.6rem;
+      margin-right: 0.6rem;
+      margin-bottom: 1.1rem;
+
+      &__clear, &__apply {
+        display: inline-flex;
+        color: $purple;
+        border: none;
+        background: transparent;
+        font-family: 'Montserrat Bold';
+        font-size: .75rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__apply {
+        display: inline-flex;
+
+      }
+    }
+  }
+}

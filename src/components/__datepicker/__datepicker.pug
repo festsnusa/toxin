@@ -1,0 +1,27 @@
+mixin createCalendar(inputFrom, inputTo, inputsVisible = true, calendarRelative = false, caption = ["Прибытие", "Выезд"])
+  -let visibilityClass = (inputsVisible) ? 'date-dropdown__box_active' : ''
+  -let datePickerClass = (!inputsVisible) ? 'date-picker__active' : ''
+  //- -let datePickerClass = ''
+  if (calendarRelative) 
+    -datePickerClass= `${datePickerClass} date-picker__active_relative`
+  -let data = {1: [visibilityClass, `date-picker-start`, caption[0], "ДД.ММ.ГГГГ"], 2: [visibilityClass, `date-picker-end`, caption[1], "ДД.ММ.ГГГГ"]}
+  .datepicker-box
+    .input-date-dropdown
+      .date-dropdown
+        each value in data
+          .date-dropdown__box(class= visibilityClass)
+            .date-dropdown__title= value[2]
+            .date-dropdown__input-box
+              input.date-dropdown__input(class= value[1] name= value[1] placeholder= value[3] readonly="readonly")
+              button.date-dropdown__button
+                span.date-dropdown__icon.material-symbols-outlined
+      .date-picker(class= datePickerClass)
+
+mixin createSingleInputCalendar(title = '', placeholder = "ДД.ММ.ГГГГ")
+  .filter-date-dropdown
+    if (title != '')
+      p.filter-date-dropdown__title= title
+    .filter-date-dropdown__input-box
+      input.date-dropdown__input(class="date-dropdown__box_active date-picker-start" name= "date-picker-start" placeholder= placeholder readonly="readonly")
+      span.filter-date-dropdown__icon.material-symbols-outlined
+    .date-picker

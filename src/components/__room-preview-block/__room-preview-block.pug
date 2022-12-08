@@ -1,0 +1,21 @@
+include ../__room-preview/__room-preview
+include ../__pagination/__pagination
+
+
+mixin createRoomPreviewSection(num)
+
+  -let i = 0
+  -let roomNumbers = [888, 840, 980, 856, 740, 982, 678, 450, 350, 666, 444, 352]
+  -let roomRatings = [5, 4, 3, 5, 4, 3, 5, 4, 3, 5, 4, 3]
+  -let numFeedbacks = [145, 65, 35, 19, 44, 56, 45, 39, 77, 25, 15, 55]
+
+  .search-room__room-preview-block
+
+    while i < num
+      -let images = [{src: `../../assets/images/room-${i+1}-slider.jpg`, alt: "Фото 1"}, {src: "../../assets/images/room-2-slider.jpg", alt: "Фото 2"}, {src: "../../assets/images/room-3-slider.jpg", alt: "Фото 3"}, {src: "../../assets/images/room-4-slider.jpg", alt: "Фото 4"}]
+      .search-room__room-preview
+        +createRoomPreview(images, roomNumbers[i], roomRatings[i], numFeedbacks[i])
+        -i++
+
+    .search-room__pagination
+      +createPagination(15, false, true)

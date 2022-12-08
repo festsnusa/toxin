@@ -1,0 +1,25 @@
+.chart {
+
+  &__title {
+
+    @extend .bold;
+    padding: 0.0625rem 0 0.95rem 1.59rem;
+    font-size: 1.1875rem;
+    line-height: 1.5rem;
+
+  }
+
+  &__content {
+    position: relative;
+    height: 132px;
+    width: 345px;
+  }
+
+  &__item {
+    display: block;
+    box-sizing: border-box;
+    height: 132px;
+    width: 345px;
+  }
+
+}

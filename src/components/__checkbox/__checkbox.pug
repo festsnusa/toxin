@@ -1,0 +1,21 @@
+mixin createCheckboxItems(data, expandable = false, expanded = false, title = '')
+
+  -let transformClass = (expanded) ? 'checkbox__button_transform' : ''
+  -let headerClass = (expandable) ? 'checkbox__header_expandable': '' 
+  -let listClass = (expandable) ? 'checkbox__list_expandable' : ''
+  if (expanded)
+    -listClass= listClass + ' checkbox__list_expandable-expanded'
+
+  .checkbox
+    .checkbox__header(class= headerClass)
+      p.checkbox__title= title
+      if (expandable)
+        button.checkbox__button(type="button" class= transformClass)
+          span.checkbox__icon.material-symbols-outlined
+    ul.checkbox__list(class= listClass)
+      each value in data
+        li.checkbox__item
+          label.checkbox__label
+            input.checkbox__input(type="checkbox" name= value["name"] checked= value["checked"])
+            span.checkbox__checkbox
+            span.checkbox__caption= value["caption"]

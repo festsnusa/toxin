@@ -1,0 +1,65 @@
+.toggle {
+    max-width: 16.25rem;
+    width: 100%;
+    // margin-bottom: 2.1rem;
+
+    &__title {
+      font-family: 'Montserrat Bold';
+      font-size: .75rem;
+      text-transform: uppercase;
+      padding-bottom: 0.9rem;
+      line-height: .9375rem;
+    }
+
+    &__list {
+      list-style: none;
+    }
+
+    &__item {
+      font-size: .875rem;
+      line-height: 1.5rem;
+      padding-bottom: 0.6rem;
+      color: $darkShade75;
+    }
+
+    &__label {
+      cursor: pointer;
+    }
+
+    &__input {
+      position: absolute;
+      appearance: none;
+      margin-top: 0.15rem;
+      background: transparent;
+      height: 1.25rem;
+      width: 2.5rem;
+      cursor: pointer;
+      border: 1px solid $darkShade25;
+      border-radius: 20px;
+
+      &:checked {
+        border-color: $purple;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+        background: $darkShade25;
+        transition: .25s;
+      }
+
+      &:checked:before {
+        left: 24px;
+        background: $purple;
+      }
+    }
+
+    &__caption {
+      padding-left: 3.05rem;
+    }
+  }

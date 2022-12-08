@@ -1,0 +1,6 @@
+mixin createDescription(data)
+	each value in data
+		.description
+			span.description__image.material-icons= value["icon"]
+			p.description__title= value["title"]
+			p.description__subtitle= value["subtitle"]

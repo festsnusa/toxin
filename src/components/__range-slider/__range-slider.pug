@@ -1,0 +1,9 @@
+mixin createRangeSlider(title = '', minValue = 0, maxValue = 16000)
+	.range-slider
+		.range-slider__header
+			if (title != '')
+				p.range-slider__title= title
+			.range-slider__count 
+				input.range-slider__input-min(value= minValue)
+				span.range-slider__separator -
+				input.range-slider__input-max(value= maxValue)

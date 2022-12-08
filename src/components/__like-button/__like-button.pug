@@ -1,0 +1,9 @@
+mixin createlikeButton(data, title = '')
+	.like-button
+		if (title != '')
+			p.like-button__title like button
+		.like-button__box
+			each value in data
+				button.like-button__button.js-like-button__button(type="button")
+					span.like-button__button__icon.material-icons.js-like-button__icon= value[1]
+					span.like-button__button__likes.js-like-button__likes= value[0]

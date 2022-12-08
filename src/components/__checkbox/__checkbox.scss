@@ -1,0 +1,88 @@
+.checkbox {
+
+  $root: &;
+
+  width: 100%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    @extend .bold;
+  }
+
+  &__button {
+    color: $darkShade50;
+    border: none;
+    background: transparent;
+    cursor: pointer; 
+
+    &_transform {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__icon:before {
+    content: 'expand_more';
+    display: inline-block;
+  }
+
+  &__list {
+    list-style: none;
+
+    &_expandable {
+      display: none;
+      position: relative;
+      list-style: none;
+
+      &-expanded {
+        display: block;
+      }
+    }
+  }
+
+  &__item {
+    font-size: .875rem;
+    padding-bottom: 0.75rem;
+    line-height: 1.125rem;
+    color: $darkShade50;
+  }
+
+  &__label {
+    cursor: pointer;
+    display: flex;
+  }
+
+  &__list &__item &__input {
+    position: absolute;
+    appearance: none;
+  }
+
+  &__list &__item &__checkbox {
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 0.0625rem solid $darkShade25;
+    border-radius: 0.25rem;
+  }
+
+  &__list &__item &__title {
+    display: inline-block;
+  }
+
+  &__caption {
+    margin-left: 1.7rem;
+  }
+
+  &__list &__item &__input:checked+#{$root}__checkbox {
+    border: 0.0625rem solid $purple;
+    background: url('../../assets/images/vector.svg') repeat 0 0;
+  }
+}

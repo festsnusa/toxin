@@ -1,0 +1,27 @@
+mixin createDropdown(data, categories, arr = [0, 0, 0])
+	-let listClass = ("expanded" in data) ? `expanded--${data["type"]}` : `shrinked--${data["type"]}`
+	.dropdown
+		if ("title" in data)
+			.dropdown__title= data["title"]
+		if ("subtitle" in data)
+			.dropdown__subtitle= data["subtitle"]
+		.dropdown__box
+			input.dropdown__input(class=`js-dropdown__input--${data["type"]}` placeholder= data["placeholder"] readonly="readonly")
+			button.dropdown__button(type="button")
+				span.dropdown__icon.material-icons
+			ul.dropdown__list(class=`dropdown__list-${listClass}`)
+				-let index = 0
+					each key, value in categories
+						li.dropdown__list-item(class=`dropdown__list-item-${listClass}`)
+							p.dropdown__list-item__caption= value
+							.dropdown__list-item__counter-box
+								button.dropdown__list-item__counter-button-minus(class=`js-dropdown__list-item__counter-button-minus-${key}`) -
+								p.dropdown__list-item__counter(class=`js-dropdown__list-item__counter-${key}`)= arr[index]
+								button.dropdown__list-item__counter-button-plus(class=`js-dropdown__list-item__counter-button-plus-${key}`) +
+								- index++
+					li(class = `dropdown__footer-section${data["footer"]}`)
+						-let submitClass = (data["footer"] == "_visible") ? 'dropdown__submit-button_visible' : 'dropdown__submit-button_invisible'
+						button.dropdown__clear-button.dropdown__clear-button-invisible(type="button")
+							span(class= `dropdown__clear-button__caption${data["footer"]}`) Очистить
+						button.dropdown__submit-button(type="button" class= submitClass)
+							span.dropdown__submit-button__caption Применить
